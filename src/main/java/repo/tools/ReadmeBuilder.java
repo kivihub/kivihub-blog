@@ -3,6 +3,7 @@ package repo.tools;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 
+import java.awt.print.PrinterAbortException;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
@@ -24,6 +25,7 @@ public class ReadmeBuilder {
     private File README;
     private String content;
     private StringBuilder retContent;
+    private int docNum = 0;
 
     public static void main(String[] args) {
         ReadmeBuilder readmeBuilder = new ReadmeBuilder(new File("README.md"));
@@ -50,16 +52,19 @@ public class ReadmeBuilder {
         if (i != -1) {
             retContent = new StringBuilder(retContent.substring(0, i + token.length()));
         }
-        retContent.append("\n" + toc);
+        retContent.append(" (总计:" + docNum + "篇)\n" + toc);
     }
 
     private String getTocContent(File file, int depth) {
-        List<File> fileList = orderedFileList(file.listFiles(name -> name.getName().matches("\\d+\\..*")));
+        List<File> fileList = orderedFileList(file.listFiles(name -> name.getName().matches("\\d+\\..*")
+                || name.getName().endsWith(".md")));
         StringBuilder sb = new StringBuilder();
         for (File item : fileList) {
-            sb.append(StringUtils.repeat("\t", depth) + buildRelativePath(item) + "\n");
+            sb.append(StringUtils.repeat("\t", depth) + "- " + buildRelativePath(item) + "\n");
             if (item.isDirectory()) {
                 sb.append(getTocContent(item, depth + 1));
+            } else {
+                docNum++;
             }
         }
         return sb.toString();
