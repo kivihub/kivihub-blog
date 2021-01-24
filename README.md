@@ -17,7 +17,7 @@
 | /reference                  | 博客中引用的文章                        |      |
 | /src/main/resources/picture | 图片目录                                |      |
 
-#### 博客目录 (总计:165篇)
+#### 博客目录 (总计:166篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -197,3 +197,5 @@
 	- [2.缓存穿透_击穿_雪崩](blog/12.redis/2.缓存穿透_击穿_雪崩.md)
 - [13.网络](blog/13.网络)
 	- [网络上行和下行](blog/13.网络/网络上行和下行.md)
+- [14.netty](blog/14.netty)
+	- [1.IO](blog/14.netty/1.IO.md)
