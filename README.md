@@ -17,7 +17,7 @@
 | /reference                  | 博客中引用的文章                        |      |
 | /src/main/resources/picture | 图片目录                                |      |
 
-#### 博客目录 (总计:166篇)
+#### 博客目录 (总计:167篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -115,10 +115,10 @@
 	- [4.Mysql事务及其隔离级别](blog/5.mysql/4.Mysql事务及其隔离级别.md)
 	- [5.MVCC的InnoDB实现](blog/5.mysql/5.MVCC的InnoDB实现.md)
 	- [6.explain](blog/5.mysql/6.explain.md)
-	- [7-1.filesort](blog/5.mysql/7-1.filesort.md)
-	- [7.Mysql优化](blog/5.mysql/7.Mysql优化.md)
-	- [7-2.NLJ和BNL](blog/5.mysql/7-2.NLJ和BNL.md)
 	- [7-3.ICP-索引条件下推](blog/5.mysql/7-3.ICP-索引条件下推.md)
+	- [7-1.filesort](blog/5.mysql/7-1.filesort.md)
+	- [7-2.NLJ和BNL](blog/5.mysql/7-2.NLJ和BNL.md)
+	- [7.Mysql优化](blog/5.mysql/7.Mysql优化.md)
 	- [8.Mysql如何保证数据不丢失](blog/5.mysql/8.Mysql如何保证数据不丢失.md)
 	- [9.MySQL_Workbench常用操作](blog/5.mysql/9.MySQL_Workbench常用操作.md)
 	- [10.Mysql如何避免partial_page_write](blog/5.mysql/10.Mysql如何避免partial_page_write.md)
@@ -166,8 +166,8 @@
 	- [29.git工作流](blog/7.git/29.git工作流.md)
 	- [30..gitindex文件](blog/7.git/30..gitindex文件.md)
 - [8.linux](blog/8.linux)
-	- [1.Ubuntu重启Gnome](blog/8.linux/1.Ubuntu重启Gnome.md)
-	- [2.设置打开文件的默认应用](blog/8.linux/2.设置打开文件的默认应用.md)
+	- [1.Ubuntu常见问题](blog/8.linux/1.Ubuntu常见问题.md)
+	- [2.Chrome常见问题](blog/8.linux/2.Chrome常见问题.md)
 	- [3.CPU使用率和负载](blog/8.linux/3.CPU使用率和负载.md)
 - [9.源码](blog/9.源码)
 	- [1.while(true)和for(;;)分析](blog/9.源码/1.while(true)和for(;;)分析.md)
@@ -199,3 +199,4 @@
 	- [网络上行和下行](blog/13.网络/网络上行和下行.md)
 - [14.netty](blog/14.netty)
 	- [1.IO](blog/14.netty/1.IO.md)
+	- [2.React IO](blog/14.netty/2.React IO.md)
