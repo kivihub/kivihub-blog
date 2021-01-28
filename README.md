@@ -17,7 +17,7 @@
 | /reference                  | 博客中引用的文章                        |      |
 | /src/main/resources/picture | 图片目录                                |      |
 
-#### 博客目录 (总计:167篇)
+#### 博客目录 (总计:165篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -185,13 +185,11 @@
 	- [6.笔记本通过网线分享网络给台式机](blog/10.工具/6.笔记本通过网线分享网络给台式机.md)
 	- [7.sshuttle使用](blog/10.工具/7.sshuttle使用.md)
 - [11.自省](blog/11.自省)
-	- [1.漫谈开发](blog/11.自省/1.漫谈开发.md)
-	- [2.阅读与提升](blog/11.自省/2.阅读与提升.md)
+	- [1.看源码的姿势](blog/11.自省/1.看源码的姿势.md)
+	- [2.如何写技术文章](blog/11.自省/2.如何写技术文章.md)
 	- [3.如何学习？](blog/11.自省/3.如何学习？.md)
 	- [4.以心理暗示对抗负面意念](blog/11.自省/4.以心理暗示对抗负面意念.md)
 	- [5.如何看待付费网课](blog/11.自省/5.如何看待付费网课.md)
-	- [6.如何写技术文章](blog/11.自省/6.如何写技术文章.md)
-	- [7.看源码的姿势](blog/11.自省/7.看源码的姿势.md)
 - [12.redis](blog/12.redis)
 	- [1.一致性hash](blog/12.redis/1.一致性hash.md)
 	- [2.缓存穿透_击穿_雪崩](blog/12.redis/2.缓存穿透_击穿_雪崩.md)
