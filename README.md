@@ -17,7 +17,7 @@
 | /reference                  | 博客中引用的文章                        |      |
 | /src/main/resources/picture | 图片目录                                |      |
 
-#### 博客目录 (总计:164篇)
+#### 博客目录 (总计:166篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -197,3 +197,6 @@
 - [14.netty](blog/14.netty)
 	- [1.IO](blog/14.netty/1.IO.md)
 	- [2.Scalable_IO_in_Java](blog/14.netty/2.Scalable_IO_in_Java.md)
+- [15.脑图](blog/15.脑图)
+	- [1.全脑记忆](blog/15.脑图/1.全脑记忆.md)
+	- [2.代码整洁之道](blog/15.脑图/2.代码整洁之道.md)
