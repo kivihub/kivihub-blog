@@ -61,7 +61,7 @@
 
 ###### 3）时刻保持数据完整性
 1. 保存到Git之前，所有数据都要经过Hash运算，并将Hash值作为数据的唯一标识和索引，而非文件名。
-2. Git采用[SHA-1](https://link.jianshu.com/?t=https%3A%2F%2Fbaike.baidu.com%2Fitem%2FSHA-1%2F1699692%3Ffr%3Daladdin)算法来生成文件或整个目录的杂凑值，并作为唯一标识。该算法输出160bit哈希值，即40个16进制字符（0-9及a-f）。类似`24b9da6552252987aa493b52f8696cd6d3b00373`。
+2. Git采用[SHA-1](https://baike.baidu.com/item/SHA-1/1699692?fr=aladdin)算法来生成文件或整个目录的杂凑值，并作为唯一标识。该算法输出160bit哈希值，即40个16进制字符（0-9及a-f）。类似`24b9da6552252987aa493b52f8696cd6d3b00373`。
 
 ##### 3. Git目录结构
 
