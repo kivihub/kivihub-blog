@@ -1,11 +1,9 @@
-package repo.tools;
+package repo.tools.internal;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import java.awt.print.PrinterAbortException;
 import java.io.File;
-import java.io.FileFilter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,12 +25,6 @@ public class ReadmeBuilder {
     private StringBuilder retContent;
     private int docNum = 0;
 
-    public static void main(String[] args) {
-        ReadmeBuilder readmeBuilder = new ReadmeBuilder(new File("README.md"));
-        readmeBuilder.buildToc();
-        readmeBuilder.flushDisk();
-    }
-
     public ReadmeBuilder(File readmeFile) {
         README = readmeFile;
         try {
@@ -53,6 +45,8 @@ public class ReadmeBuilder {
             retContent = new StringBuilder(retContent.substring(0, i + token.length()));
         }
         retContent.append(" (总计:" + docNum + "篇)\n" + toc);
+
+        flushDisk();
     }
 
     private String getTocContent(File file, int depth) {
@@ -89,7 +83,7 @@ public class ReadmeBuilder {
         return retList;
     }
 
-    public void flushDisk() {
+    private void flushDisk() {
         try {
             FileUtils.writeStringToFile(README, retContent.toString(), UTF_8);
         } catch (IOException e) { // ignore
