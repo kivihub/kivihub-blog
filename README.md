@@ -17,7 +17,7 @@
 | /reference                  | 博客中引用的文章                        |      |
 | /src/main/resources/picture | 图片目录                                |      |
 
-#### 博客目录 (总计:175篇)
+#### 博客目录 (总计:177篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -111,6 +111,7 @@
 	- [14.分库分表](blog/5.mysql/14.分库分表.md)
 	- [15.Mysql如何保证数据不丢失](blog/5.mysql/15.Mysql如何保证数据不丢失.md)
 	- [16.MySQL_Workbench常用操作](blog/5.mysql/16.MySQL_Workbench常用操作.md)
+	- [17.InnoDb死锁分析](blog/5.mysql/17.InnoDb死锁分析.md)
 - [6.maven](blog/6.maven)
 	- [1.mvn_clean_deploy出错](blog/6.maven/1.mvn_clean_deploy出错.md)
 	- [2.mvn_dependency_tree和mvn_clean_install的依赖不一致](blog/6.maven/2.mvn_dependency_tree和mvn_clean_install的依赖不一致.md)
@@ -118,6 +119,7 @@
 	- [4.Maven仓库](blog/6.maven/4.Maven仓库.md)
 	- [5.Maven仓库更新策略](blog/6.maven/5.Maven仓库更新策略.md)
 	- [6.DependencyManagment作用](blog/6.maven/6.DependencyManagment作用.md)
+	- [7.Maven的properties之生效原则](blog/6.maven/7.Maven的properties之生效原则.md)
 - [7.git](blog/7.git)
 	- [0.序言](blog/7.git/0.序言.md)
 	- [1.VCS简介](blog/7.git/1.VCS简介.md)
@@ -167,8 +169,7 @@
 	- [3.日常使用-IDEA](blog/10.工具/3.日常使用-IDEA.md)
 	- [4.日常使用-Chrome](blog/10.工具/4.日常使用-Chrome.md)
 	- [5.日常使用-杂](blog/10.工具/5.日常使用-杂.md)
-	- [6.笔记本通过网线分享网络给台式机](blog/10.工具/6.笔记本通过网线分享网络给台式机.md)
-	- [7.sshuttle使用](blog/10.工具/7.sshuttle使用.md)
+	- [6.sshuttle使用](blog/10.工具/6.sshuttle使用.md)
 - [11.自省](blog/11.自省)
 	- [1.看源码的姿势](blog/11.自省/1.看源码的姿势.md)
 	- [2.如何写技术文章](blog/11.自省/2.如何写技术文章.md)
@@ -184,6 +185,7 @@
 	- [1.网络上行和下行](blog/13.网络/1.网络上行和下行.md)
 	- [2.负载均衡4层和7层区别](blog/13.网络/2.负载均衡4层和7层区别.md)
 	- [3.session_cookie_token](blog/13.网络/3.session_cookie_token.md)
+	- [4.笔记本通过网线分享网络给台式机](blog/13.网络/4.笔记本通过网线分享网络给台式机.md)
 - [14.netty](blog/14.netty)
 	- [1.IO](blog/14.netty/1.IO.md)
 	- [2.Scalable_IO_in_Java](blog/14.netty/2.Scalable_IO_in_Java.md)
