@@ -17,7 +17,7 @@
 | /reference                  | 博客中引用的文章                        |      |
 | /src/main/resources/picture | 图片目录                                |      |
 
-#### 博客目录 (总计:178篇)
+#### 博客目录 (总计:179篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -206,6 +206,7 @@
 	- [7.替换日志框架过程中对重构的思考](blog/16.工程实践/7.替换日志框架过程中对重构的思考.md)
 	- [8.第三方组件的中间层](blog/16.工程实践/8.第三方组件的中间层.md)
 	- [9.科学的引用类名和包名](blog/16.工程实践/9.科学的引用类名和包名.md)
+	- [10.使用CPU百分位作容器缩容的参考指标](blog/16.工程实践/10.使用CPU百分位作容器缩容的参考指标.md)
 - [17.安全](blog/17.安全)
 	- [1.XSRF和XSS](blog/17.安全/1.XSRF和XSS.md)
 	- [2.浏览器跨域](blog/17.安全/2.浏览器跨域.md)
