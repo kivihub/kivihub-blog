@@ -17,7 +17,7 @@
 | /reference                  | 博客中引用的文章                        |      |
 | /src/main/resources/picture | 图片目录                                |      |
 
-#### 博客目录 (总计:180篇)
+#### 博客目录 (总计:181篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -187,6 +187,7 @@
 	- [2.负载均衡4层和7层区别](blog/13.网络/2.负载均衡4层和7层区别.md)
 	- [3.session_cookie_token](blog/13.网络/3.session_cookie_token.md)
 	- [4.笔记本通过网线分享网络给台式机](blog/13.网络/4.笔记本通过网线分享网络给台式机.md)
+	- [5.DNS和URL重定向](blog/13.网络/5.DNS和URL重定向.md)
 - [14.netty](blog/14.netty)
 	- [1.IO](blog/14.netty/1.IO.md)
 	- [2.Scalable_IO_in_Java](blog/14.netty/2.Scalable_IO_in_Java.md)
