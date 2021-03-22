@@ -10,14 +10,18 @@
 
 #### 仓库目录
 
-| 目录                        | 介绍                                    | 其他 |
-| --------------------------- | --------------------------------------- | ---- |
-| /blog                       | 较零散知识，偏某个知识细节              |      |
-| /shared                     | 汇总性文章，对某个知识f范围的全局性总结 |      |
-| /reference                  | 博客中引用的文章                        |      |
-| /src/main/resources/picture | 图片目录                                |      |
+| 目录                        | 介绍                               | 其他 |
+| --------------------------- | ---------------------------------- | ---- |
+| /blog                       | 较零散知识，偏某个知识细节         |      |
+| /shared                     | 汇总性文章，对某个知识的全局性总结 |      |
+| /reference                  | 博客中引用的文章                   |      |
+| /src/main/resources/picture | 图片目录                           |      |
 
-#### 博客目录 (总计:181篇)
+#### 总结分享 (总计:1篇)
+
+* [Git分享](shared/Git分享.md)
+
+#### 博客目录 (总计:182篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -212,6 +216,7 @@
 	- [1.XSRF和XSS](blog/17.安全/1.XSRF和XSS.md)
 	- [2.浏览器跨域](blog/17.安全/2.浏览器跨域.md)
 	- [3.非对称密码的私钥包含了公钥信息](blog/17.安全/3.非对称密码的私钥包含了公钥信息.md)
+	- [4.RSA与Padding模式](blog/17.安全/4.RSA与Padding模式.md)
 - [18.设计模式](blog/18.设计模式)
 	- [1.从一个pojo类来看单一性原则](blog/18.设计模式/1.从一个pojo类来看单一性原则.md)
 	- [2.从Camel中学习FluntApi设计](blog/18.设计模式/2.从Camel中学习FluntApi设计.md)
