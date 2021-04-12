@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:183篇)
+#### 博客目录 (总计:184篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -212,6 +212,7 @@
 	- [8.第三方组件的中间层](blog/16.工程实践/8.第三方组件的中间层.md)
 	- [9.科学的引用类名和包名](blog/16.工程实践/9.科学的引用类名和包名.md)
 	- [10.使用CPU百分位作容器缩容的参考指标](blog/16.工程实践/10.使用CPU百分位作容器缩容的参考指标.md)
+	- [11.大促扩容要有数据支撑](blog/16.工程实践/11.大促扩容要有数据支撑.md)
 - [17.安全](blog/17.安全)
 	- [1.XSRF和XSS](blog/17.安全/1.XSRF和XSS.md)
 	- [2.浏览器跨域](blog/17.安全/2.浏览器跨域.md)
