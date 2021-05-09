@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:188篇)
+#### 博客目录 (总计:189篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -99,6 +99,7 @@
 	- [5.Spring集成第三方组件-JSF](blog/4.spring/5.Spring集成第三方组件-JSF.md)
 	- [6.Spring集成第三方组件-Mybatis](blog/4.spring/6.Spring集成第三方组件-Mybatis.md)
 	- [7.Springboot自动配置](blog/4.spring/7.Springboot自动配置.md)
+	- [8.Spring集成示例组件实战](blog/4.spring/8.Spring集成示例组件实战.md)
 - [5.mysql](blog/5.mysql)
 	- [1.时区与时间：Mysql，JDBC，JVM](blog/5.mysql/1.时区与时间：Mysql，JDBC，JVM.md)
 	- [2.MySql和B+树](blog/5.mysql/2.MySql和B+树.md)
