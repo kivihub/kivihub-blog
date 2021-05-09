@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:189篇)
+#### 博客目录 (总计:190篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -218,6 +218,7 @@
 	- [11.大促扩容要有数据支撑](blog/16.工程实践/11.大促扩容要有数据支撑.md)
 	- [12.关于重构时信息量的思考](blog/16.工程实践/12.关于重构时信息量的思考.md)
 	- [13.你的压测结果真的符合预期吗](blog/16.工程实践/13.你的压测结果真的符合预期吗.md)
+	- [14.关于配置中心设计的思考](blog/16.工程实践/14.关于配置中心设计的思考.md)
 - [17.安全](blog/17.安全)
 	- [1.XSRF和XSS](blog/17.安全/1.XSRF和XSS.md)
 	- [2.浏览器跨域](blog/17.安全/2.浏览器跨域.md)
