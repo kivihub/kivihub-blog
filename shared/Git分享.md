@@ -288,7 +288,7 @@ git fiter-branch
 
 ```
 git reset --hard revision
-git reset --soft dev
+git reset --soft origin/dev
 git commit
 ```
 
