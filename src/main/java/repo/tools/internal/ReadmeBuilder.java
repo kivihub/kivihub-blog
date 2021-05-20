@@ -4,6 +4,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
+import java.io.FileFilter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -50,8 +51,13 @@ public class ReadmeBuilder {
     }
 
     private String getTocContent(File file, int depth) {
-        List<File> fileList = orderedFileList(file.listFiles(name -> name.getName().matches("\\d+\\..*")
-                || name.getName().endsWith(".md")));
+        List<File> fileList = orderedFileList(file.listFiles(file1 -> {
+            String name = file1.getName();
+            if (name.endsWith(".todo")) {
+                return false;
+            }
+            return name.matches("\\d+\\..*") || name.endsWith(".md");
+        }));
         StringBuilder sb = new StringBuilder();
         for (File item : fileList) {
             sb.append(StringUtils.repeat("\t", depth) + "- " + buildRelativePath(item) + "\n");
