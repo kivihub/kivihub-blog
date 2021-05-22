@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:198篇)
+#### 博客目录 (总计:199篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -57,6 +57,7 @@
 	- [31.debug时加的观察变量影响了debug](blog/0.TroubleShooting/31.debug时加的观察变量影响了debug.md)
 	- [32.MQ积压2亿了](blog/0.TroubleShooting/32.MQ积压2亿了.md)
 	- [33.抓包分析http请求超时](blog/0.TroubleShooting/33.抓包分析http请求超时.md)
+	- [34.MQ消费出现陡增和断崖](blog/0.TroubleShooting/34.MQ消费出现陡增和断崖.md)
 - [1.java](blog/1.java)
 	- [1.Jar冲突](blog/1.java/1.Jar冲突.md)
 	- [2.ClassNotFoundException_vs_NoClassDefFoundError](blog/1.java/2.ClassNotFoundException_vs_NoClassDefFoundError.md)
