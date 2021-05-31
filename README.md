@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:206篇)
+#### 博客目录 (总计:207篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -249,3 +249,4 @@
 - [20.elasticsearch](blog/20.elasticsearch)
 	- [1.ES索引分片数设置原则](blog/20.elasticsearch/1.ES索引分片数设置原则.md)
 	- [2.ES倒排索引](blog/20.elasticsearch/2.ES倒排索引.md)
+	- [3.ES的乐观锁](blog/20.elasticsearch/3.ES的乐观锁.md)
