@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:205篇)
+#### 博客目录 (总计:206篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -248,3 +248,4 @@
 	- [8.使用msgpack实体增加字段序列异常](blog/19.RPC框架/8.使用msgpack实体增加字段序列异常.md)
 - [20.elasticsearch](blog/20.elasticsearch)
 	- [1.ES索引分片数设置原则](blog/20.elasticsearch/1.ES索引分片数设置原则.md)
+	- [2.ES倒排索引](blog/20.elasticsearch/2.ES倒排索引.md)
