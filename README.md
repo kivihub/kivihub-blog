@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:209篇)
+#### 博客目录 (总计:212篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -59,10 +59,11 @@
 	- [33.抓包分析http请求超时](blog/0.TroubleShooting/33.抓包分析http请求超时.md)
 	- [34.MQ消费出现陡增和断崖](blog/0.TroubleShooting/34.MQ消费出现陡增和断崖.md)
 	- [35.CPU飚高](blog/0.TroubleShooting/35.CPU飚高.md)
+	- [36.因浮点精度损失了1分钱](blog/0.TroubleShooting/36.因浮点精度损失了1分钱.md)
 - [1.java](blog/1.java)
 	- [1.Jar冲突](blog/1.java/1.Jar冲突.md)
 	- [2.ClassNotFoundException_vs_NoClassDefFoundError](blog/1.java/2.ClassNotFoundException_vs_NoClassDefFoundError.md)
-	- [3.HashMap的table长度为什么是2^n?](blog/1.java/3.HashMap的table长度为什么是2^n?.md)
+	- [3.HashMap的table长度为什么是2^n?](blog/1.java/3.HashMap的table长度为什么是2的幂.md)
 	- [4.别在assert中包含业务代码](blog/1.java/4.别在assert中包含业务代码.md)
 	- [5.工厂类中使用ThreadLocal的陷阱](blog/1.java/5.工厂类中使用ThreadLocal的陷阱.md)
 	- [6.误用BlockingQueue方法导致日志丢失](blog/1.java/6.误用BlockingQueue方法导致日志丢失.md)
@@ -252,3 +253,5 @@
 	- [2.ES倒排索引](blog/20.elasticsearch/2.ES倒排索引.md)
 	- [3.ES的乐观锁](blog/20.elasticsearch/3.ES的乐观锁.md)
 	- [4.ES分片和副本](blog/20.elasticsearch/4.ES分片和副本.md)
+	- [5.ES脑裂问题](blog/20.elasticsearch/5.ES脑裂问题.md)
+	- [6.ES分页](blog/20.elasticsearch/6.ES分页.md)
