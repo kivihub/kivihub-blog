@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:217篇)
+#### 博客目录 (总计:219篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -77,6 +77,7 @@
 	- [14.SFTP和FTPS，HTTPS](blog/1.java/14.SFTP和FTPS，HTTPS.md)
 	- [15.使用hsdb查看运行时类](blog/1.java/15.使用hsdb查看运行时类.md)
 	- [16.Java_SPI细节](blog/1.java/16.Java_SPI细节.md)
+	- [17.HttpClient连接池](blog/1.java/17.HttpClient连接池.md)
 - [2.java并发](blog/2.java并发)
 	- [1.JMM](blog/2.java并发/1.JMM.md)
 	- [2.多处理器下的数据一致性](blog/2.java并发/2.多处理器下的数据一致性.md)
@@ -108,6 +109,7 @@
 	- [7.Springboot自动配置](blog/4.spring/7.Springboot自动配置.md)
 	- [8.Spring集成示例组件实战](blog/4.spring/8.Spring集成示例组件实战.md)
 	- [9.Springboot配置文件读取顺序](blog/4.spring/9.Springboot配置文件读取顺序.md)
+	- [10.扩展接口SmartInitializingSingleton](blog/4.spring/10.扩展接口SmartInitializingSingleton.md)
 - [5.mysql](blog/5.mysql)
 	- [1.时区与时间：Mysql，JDBC，JVM](blog/5.mysql/1.时区与时间：Mysql，JDBC，JVM.md)
 	- [2.MySql和B+树](blog/5.mysql/2.MySql和B+树.md)
