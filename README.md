@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:219篇)
+#### 博客目录 (总计:220篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -197,6 +197,7 @@
 	- [7.相声包袱思考](blog/11.自省/7.相声包袱思考.md)
 	- [8.思考如何落地才能快速开始](blog/11.自省/8.思考如何落地才能快速开始.md)
 	- [9.工作中不能只抛出问题](blog/11.自省/9.工作中不能只抛出问题.md)
+	- [10.关于会议的一些思考](blog/11.自省/10.关于会议的一些思考.md)
 - [12.redis](blog/12.redis)
 	- [1.一致性hash](blog/12.redis/1.一致性hash.md)
 	- [2.缓存穿透_击穿_雪崩](blog/12.redis/2.缓存穿透_击穿_雪崩.md)
