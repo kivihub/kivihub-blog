@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:221篇)
+#### 博客目录 (总计:222篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -61,6 +61,7 @@
 	- [35.CPU飚高](blog/0.TroubleShooting/35.CPU飚高.md)
 	- [36.因浮点精度损失了1分钱](blog/0.TroubleShooting/36.因浮点精度损失了1分钱.md)
 	- [37.记一次堆内存使用率飙高排查](blog/0.TroubleShooting/37.记一次堆内存使用率飙高排查.md)
+	- [38.wsdl获取逻辑修改事故的复盘](blog/0.TroubleShooting/38.wsdl获取逻辑修改事故的复盘.md)
 - [1.java](blog/1.java)
 	- [1.Jar冲突](blog/1.java/1.Jar冲突.md)
 	- [2.ClassNotFoundException_vs_NoClassDefFoundError](blog/1.java/2.ClassNotFoundException_vs_NoClassDefFoundError.md)
