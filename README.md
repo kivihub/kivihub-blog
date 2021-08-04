@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:222篇)
+#### 博客目录 (总计:223篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -182,6 +182,7 @@
 	- [3.URLClassPath源码分析](blog/9.源码/3.URLClassPath源码分析.md)
 	- [4.Tomcat类加载器](blog/9.源码/4.Tomcat类加载器.md)
 	- [5.从SocketTimeout，ReadTimeout来看源码](blog/9.源码/5.从SocketTimeout，ReadTimeout来看源码.md)
+	- [6.Camel的Exchange分析](blog/9.源码/6.Camel的Exchange分析.md)
 - [10.工具](blog/10.工具)
 	- [1.日常使用-Ubuntu](blog/10.工具/1.日常使用-Ubuntu.md)
 	- [2.日常使用-Mac](blog/10.工具/2.日常使用-Mac.md)
