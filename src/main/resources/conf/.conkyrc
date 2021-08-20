@@ -1,0 +1,45 @@
+ conky.config = {
+    own_window = true,
+    own_window_transparent = true,
+    own_window_type =  'desktop',
+    own_window_argb_visual = true,
+    background = false,
+    use_xft = true,
+    xftalpha = 0.1,
+    update_interval = 1.0,
+    total_run_times = 0,
+    double_buffer = true,
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    minimum_height = 300,
+    maximum_width = 1500,
+    border_width = 0,
+    default_color = 'white',
+    font = 'Ubuntu:size=8',
+    alignment =  'top_right',
+    gap_x = 10,
+    gap_y = 50,
+    no_buffers = true,
+    cpu_avg_samples = 2,
+    override_utf8_locale = true,
+    short_units = true,
+    pad_percents = 2,
+    use_spacer =  'right'
+}
+
+conky.text = [[
+
+${goto 18}${font Ubuntu:pixelsize=12}${color FFA300}System${color}${goto 60}$conky_build_arch
+${goto 18}${font Ubuntu:pixelsize=12}${color FFA300}Hostname${color}${goto 75}$nodename
+${color EAEAEA}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -85}${offset 10}${color FFA300}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 24}${font GE Inspira:pixelsize=40}${offset -150}${time %A}${font}
+${voffset 1}
+${goto 45}${font Ubuntu:pixelsize=9}${color FFA300}Free${goto 120}Size
+${goto 20}${font Ubuntu:pixelsize=11}${color FFA300}HD${goto 45}$color${fs_free /}${goto 75}  /  ${goto 120}${fs_size /}${goto 170}${color FFA300}CPU Load${goto 280}$color${cpu cpu0}%
+${goto 170}${color FFA300}RAM${goto 225}$color$mem ${goto 260}/ ${goto 270}$memmax
+${goto 170}${color FFA300}SWAP${goto 225}$color$swap ${goto 260}/ ${goto 270}$swapmax
+${voffset 1}
+${goto 20}${color FFA300}LAN$color${goto 50}${addr wlxb8de5e569931}
+${goto 20}${color FFA300}GW$color${goto 50}${gw_ip}
+${goto 20}${color FFA300}DLs${goto 50}$color${downspeed wlxb8de5e569931}${goto 120}${color FFA300}UPs${goto 150}$color${upspeed wlxb8de5e569931}
+]]
