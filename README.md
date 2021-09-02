@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:225篇)
+#### 博客目录 (总计:226篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -81,6 +81,7 @@
 	- [16.Java_SPI细节](blog/1.java/16.Java_SPI细节.md)
 	- [17.HttpClient连接池](blog/1.java/17.HttpClient连接池.md)
 	- [18.Gson如何实例化类](blog/1.java/18.Gson如何实例化类.md)
+	- [19.HttpClient结构](blog/1.java/19.HttpClient结构.md)
 - [2.java并发](blog/2.java并发)
 	- [1.JMM](blog/2.java并发/1.JMM.md)
 	- [2.多处理器下的数据一致性](blog/2.java并发/2.多处理器下的数据一致性.md)
