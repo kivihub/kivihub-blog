@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:226篇)
+#### 博客目录 (总计:227篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -141,6 +141,7 @@
 	- [5.Maven仓库更新策略](blog/6.maven/5.Maven仓库更新策略.md)
 	- [6.DependencyManagment作用](blog/6.maven/6.DependencyManagment作用.md)
 	- [7.Maven的properties之生效原则](blog/6.maven/7.Maven的properties之生效原则.md)
+	- [8.Maven常用命令](blog/6.maven/8.Maven常用命令.md)
 - [7.git](blog/7.git)
 	- [0.序言](blog/7.git/0.序言.md)
 	- [1.VCS简介](blog/7.git/1.VCS简介.md)
