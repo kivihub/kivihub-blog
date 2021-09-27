@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:233篇)
+#### 博客目录 (总计:234篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -179,6 +179,7 @@
 	- [29.git工作流](blog/7.git/29.git工作流.md)
 	- [30..gitindex文件](blog/7.git/30..gitindex文件.md)
 	- [31.工作流的思考](blog/7.git/31.工作流的思考.md)
+	- [32.痛点-合并时无法忽略文件](blog/7.git/32.痛点-合并时无法忽略文件.md)
 - [8.linux](blog/8.linux)
 	- [1.CPU使用率和负载](blog/8.linux/1.CPU使用率和负载.md)
 	- [2.零拷贝](blog/8.linux/2.零拷贝.md)
