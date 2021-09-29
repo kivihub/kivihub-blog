@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:235篇)
+#### 博客目录 (总计:236篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -199,6 +199,7 @@
 	- [4.日常使用-Chrome](blog/10.工具/4.日常使用-Chrome.md)
 	- [5.日常使用-杂](blog/10.工具/5.日常使用-杂.md)
 	- [6.sshuttle使用](blog/10.工具/6.sshuttle使用.md)
+	- [7.openfortivpn使用](blog/10.工具/7.openfortivpn使用.md)
 - [11.自省](blog/11.自省)
 	- [1.看源码的姿势](blog/11.自省/1.看源码的姿势.md)
 	- [2.如何写技术文章](blog/11.自省/2.如何写技术文章.md)
