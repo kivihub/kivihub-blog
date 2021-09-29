@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:236篇)
+#### 博客目录 (总计:237篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -185,6 +185,7 @@
 	- [2.零拷贝](blog/8.linux/2.零拷贝.md)
 	- [3.同步异步和阻塞非阻塞](blog/8.linux/3.同步异步和阻塞非阻塞.md)
 	- [4.User_vs_Kernel](blog/8.linux/4.User_vs_Kernel.md)
+	- [5.Debian包管理](blog/8.linux/5.Debian包管理.md)
 - [9.源码](blog/9.源码)
 	- [1.while(true)和for(;;)分析](blog/9.源码/1.while(true)和for(;;)分析.md)
 	- [2.Junit源码分析](blog/9.源码/2.Junit源码分析.md)
