@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:237篇)
+#### 博客目录 (总计:238篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -282,3 +282,5 @@
 - [22.算法](blog/22.算法)
 	- [1.排序](blog/22.算法/1.排序.md)
 	- [2.深度广度搜索](blog/22.算法/2.深度广度搜索.md)
+- [23.转载](blog/23.转载)
+	- [1.安全VPN封装大法之万法归宗](blog/23.转载/1.安全VPN封装大法之万法归宗.md)
