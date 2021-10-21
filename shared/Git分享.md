@@ -374,6 +374,10 @@ wangqiwei -- 本地分支/临时分支
 
 ##### 6. cherry-pick后小心revert
 
+如以下情况会出现非预期结果
+
+![image-20211021180444036](../src/main/resources/picture/image-20211021180444036.png)
+
 #### 四、 Git工作流
 
 三大工作流：
