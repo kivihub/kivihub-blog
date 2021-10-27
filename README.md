@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:238篇)
+#### 博客目录 (总计:239篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -276,6 +276,7 @@
 	- [4.ES分片和副本](blog/20.elasticsearch/4.ES分片和副本.md)
 	- [5.ES脑裂问题](blog/20.elasticsearch/5.ES脑裂问题.md)
 	- [6.ES分页](blog/20.elasticsearch/6.ES分页.md)
+	- [7.ES_CPU飚高](blog/20.elasticsearch/7.ES_CPU飚高.md)
 - [21.分布式](blog/21.分布式)
 	- [1.分布式网络及共识协议](blog/21.分布式/1.分布式网络及共识协议.md)
 	- [2.常见分布式中间件的共识协议](blog/21.分布式/2.常见分布式中间件的共识协议.md)
