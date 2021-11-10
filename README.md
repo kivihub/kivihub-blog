@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:241篇)
+#### 博客目录 (总计:242篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting](blog/0.TroubleShooting/0.TroubleShooting.md)
 	- [1.为什么我的EL在测试和线上环境结果不同](blog/0.TroubleShooting/1.为什么我的EL在测试和线上环境结果不同.md)
@@ -146,6 +146,7 @@
 	- [10.Maven源码分析](blog/6.maven/10.Maven源码分析.md)
 	- [11.Maven生命周期和插件MOJO](blog/6.maven/11.Maven生命周期和插件MOJO.md)
 	- [12.Maven依赖解析分析](blog/6.maven/12.Maven依赖解析分析.md)
+	- [13.间接依赖未下载](blog/6.maven/13.间接依赖未下载.md)
 - [7.git](blog/7.git)
 	- [0.序言](blog/7.git/0.序言.md)
 	- [1.VCS简介](blog/7.git/1.VCS简介.md)
