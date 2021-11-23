@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:245篇)
+#### 博客目录 (总计:247篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting方法论](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
 	- [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -154,6 +154,8 @@
 	- [9.Maven依赖解析分析](blog/6.maven/9.Maven依赖解析分析.md)
 	- [10.Maven源码分析](blog/6.maven/10.Maven源码分析.md)
 	- [11.Maven生命周期和插件MOJO](blog/6.maven/11.Maven生命周期和插件MOJO.md)
+	- [12.Maven分类classifier](blog/6.maven/12.Maven分类classifier.md)
+	- [13.打包后-JAR包名为时间戳orSNAPSHOT](blog/6.maven/13.打包后-JAR包名为时间戳orSNAPSHOT.md)
 - [7.git](blog/7.git)
 	- [0.序言](blog/7.git/0.序言.md)
 	- [1.VCS简介](blog/7.git/1.VCS简介.md)
