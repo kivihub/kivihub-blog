@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:247篇)
+#### 博客目录 (总计:248篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting方法论](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
 	- [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -111,6 +111,7 @@
 	- [7.三色标记](blog/3.jvm/7.三色标记.md)
 	- [8.卡表](blog/3.jvm/8.卡表.md)
 	- [9.CMS日志分析](blog/3.jvm/9.CMS日志分析.md)
+	- [10.JVM运行参数](blog/3.jvm/10.JVM运行参数.md)
 - [4.spring](blog/4.spring)
 	- [0.大纲](blog/4.spring/0.大纲.md)
 	- [1.Spring循环依赖](blog/4.spring/1.Spring循环依赖.md)
