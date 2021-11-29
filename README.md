@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:248篇)
+#### 博客目录 (总计:249篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting方法论](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
 	- [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -291,6 +291,7 @@
 	- [6.ES分页](blog/20.elasticsearch/6.ES分页.md)
 	- [7.ES_CPU飚高](blog/20.elasticsearch/7.ES_CPU飚高.md)
 	- [8.索引备份实践](blog/20.elasticsearch/8.索引备份实践.md)
+	- [9.ES磁盘不足拒绝写](blog/20.elasticsearch/9.ES磁盘不足拒绝写.md)
 - [21.分布式](blog/21.分布式)
 	- [1.分布式网络及共识协议](blog/21.分布式/1.分布式网络及共识协议.md)
 	- [2.常见分布式中间件的共识协议](blog/21.分布式/2.常见分布式中间件的共识协议.md)
