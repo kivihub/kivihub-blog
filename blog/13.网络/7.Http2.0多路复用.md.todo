@@ -1,0 +1,25 @@
+### 一、Http多路复用与IO多路复用区别
+
+**HTTP多路复用指多个请求复用同一条TCP连接**
+
+![HTTP/2 multiplexes requests and responses over a single connection](../../src/main/resources/picture/Bartenev-conf2015-slide5_inside-multiplexing.png)
+
+**IO多路复用指多个Socket复用一个事件监听器Selector，由它同一监听IO事件**
+
+<img src="../../src/main/resources/picture/image-20210124141255798.png" alt="image-20210124141255798" style="zoom:50%;" />
+
+### 二、超时属性
+
+1）Http多路复用时，SocketTimeout含义
+
+### 三、网卡/缓冲区/文件描述符
+
+1）端口是虚拟的吗？
+
+2）Socket？文件描述符？
+
+3）数据发送过程梳理：进程 -》 socket -》 网卡
+
+### # 参考
+
+1. https://www.nginx.com/blog/http2-module-nginx/#multiplexing
