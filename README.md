@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:249篇)
+#### 博客目录 (总计:250篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting方法论](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
 	- [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -225,6 +225,7 @@
 	- [9.工作中不能只抛出问题](blog/11.自省/9.工作中不能只抛出问题.md)
 	- [10.关于会议的一些思考](blog/11.自省/10.关于会议的一些思考.md)
 - [12.redis](blog/12.redis)
+	- [0.Consistent_Hashing_and_Random_Trees翻译](blog/12.redis/0.Consistent_Hashing_and_Random_Trees翻译.md)
 	- [1.一致性hash](blog/12.redis/1.一致性hash.md)
 	- [2.缓存穿透_击穿_雪崩](blog/12.redis/2.缓存穿透_击穿_雪崩.md)
 - [13.网络](blog/13.网络)
@@ -300,3 +301,4 @@
 	- [2.深度广度搜索](blog/22.算法/2.深度广度搜索.md)
 - [23.转载](blog/23.转载)
 	- [1.安全VPN封装大法之万法归宗](blog/23.转载/1.安全VPN封装大法之万法归宗.md)
+- [24.容器](blog/24.容器)
