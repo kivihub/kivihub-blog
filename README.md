@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:251篇)
+#### 博客目录 (总计:252篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting方法论](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
 	- [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -267,6 +267,7 @@
 	- [3.非对称密码的私钥包含了公钥信息](blog/17.安全/3.非对称密码的私钥包含了公钥信息.md)
 	- [4.RSA与Padding模式](blog/17.安全/4.RSA与Padding模式.md)
 	- [5.ssh-keygen生成PEM格式密钥](blog/17.安全/5.ssh-keygen生成PEM格式密钥.md)
+	- [6.cacert证书查看和导入](blog/17.安全/6.cacert证书查看和导入.md)
 - [18.设计模式](blog/18.设计模式)
 	- [1.从一个pojo类来看单一性原则](blog/18.设计模式/1.从一个pojo类来看单一性原则.md)
 	- [2.从Camel中学习FluntApi设计](blog/18.设计模式/2.从Camel中学习FluntApi设计.md)
