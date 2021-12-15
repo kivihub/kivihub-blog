@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:250篇)
+#### 博客目录 (总计:251篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting方法论](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
 	- [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -302,3 +302,4 @@
 - [23.转载](blog/23.转载)
 	- [1.安全VPN封装大法之万法归宗](blog/23.转载/1.安全VPN封装大法之万法归宗.md)
 - [24.容器](blog/24.容器)
+	- [1.Nginx架构翻译](blog/24.容器/1.Nginx架构翻译.md)

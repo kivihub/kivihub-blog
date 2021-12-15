@@ -1,9 +1,0 @@
-### TODO
-
-![img](../../src/main/resources/picture/nginx_architecture_thumbnail.png)
-
-### # 参考
-
-1. https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/
-2. https://www.nginx.com/resources/library/infographic-inside-nginx/
-3. https://www.aosabook.org/en/nginx.html
