@@ -21,7 +21,7 @@
 
 * [Git分享](shared/Git分享.md)
 
-#### 博客目录 (总计:252篇)
+#### 博客目录 (总计:253篇)
 - [0.TroubleShooting](blog/0.TroubleShooting)
 	- [0.TroubleShooting方法论](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
 	- [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -91,6 +91,7 @@
 	- [18.Gson如何实例化类](blog/1.java/18.Gson如何实例化类.md)
 	- [19.HttpClient结构](blog/1.java/19.HttpClient结构.md)
 	- [20.slf4j使用](blog/1.java/20.slf4j使用.md)
+	- [21.System.err重定向到slf4j](blog/1.java/21.System.err重定向到slf4j.md)
 - [2.java并发](blog/2.java并发)
 	- [1.JMM](blog/2.java并发/1.JMM.md)
 	- [2.多处理器下的数据一致性](blog/2.java并发/2.多处理器下的数据一致性.md)
