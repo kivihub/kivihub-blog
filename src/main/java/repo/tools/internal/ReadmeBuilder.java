@@ -1,15 +1,16 @@
 package repo.tools.internal;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.AbstractMap;
 import java.util.Comparator;
-import java.util.List;
+import java.util.Map.Entry;
+import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,83 +21,85 @@ import static java.nio.charset.StandardCharsets.UTF_8;
  * @date 2021/01/23 10:33 AM
  */
 public class ReadmeBuilder {
-    private File rootPath;
-    private File README;
-    private String content;
-    private StringBuilder retContent;
-    private int docNum = 0;
+    private Logger logger = LoggerFactory.getLogger(ReadmeBuilder.class);
+    private File readmeFile;
+    private String readmeContent;
 
-    public ReadmeBuilder(File readmeFile) {
-        README = readmeFile;
-        try {
-            rootPath = README.getCanonicalFile().getParentFile();
-            content = FileUtils.readFileToString(README, UTF_8);
-            retContent = new StringBuilder(content);
-        } catch (IOException e) {// ignore
-        }
+    public ReadmeBuilder(File readmeFile) throws IOException {
+        this.readmeFile = readmeFile.getCanonicalFile();
+        this.readmeContent = FileUtils.readFileToString(this.readmeFile, UTF_8);
     }
 
-    public void buildToc() {
+    public void buildToc() throws IOException {
         String token = "#### 博客目录";
-        File blogDir = new File(rootPath, "blog");
-        String toc = getTocContent(blogDir, 0);
-
-        int i = retContent.indexOf(token);
-        if (i != -1) {
-            retContent = new StringBuilder(retContent.substring(0, i + token.length()));
+        int index = readmeContent.indexOf(token);
+        if (index == -1) {
+            return;
         }
-        retContent.append(" (总计:" + docNum + "篇)\n" + toc);
 
-        flushDisk();
+        Entry<Integer, String> tocEntry = getTocContent(new File(readmeFile, "../blog"));
+        readmeContent = readmeContent.substring(0, index + token.length()) +
+                " (总计:" + tocEntry.getKey() + "篇)\n"
+                + tocEntry.getValue();
+        FileUtils.writeStringToFile(readmeFile, readmeContent, UTF_8);
+        logger.info("Toc Build Success.");
     }
 
-    private String getTocContent(File file, int depth) {
-        List<File> fileList = orderedFileList(file.listFiles(file1 -> {
-            String name = file1.getName();
+    private Entry<Integer, String> getTocContent(File file) {
+        ArticleDisplayFormatter displayFormatter = new ArticleDisplayFormatter();
+        ArticleVisitor articleVisitor = new ArticleVisitor();
+        articleVisitor.setArticleSorter(new FileOrder())
+                .setArticleDisplayFormatter(displayFormatter)
+                .setDirDisplayFormatter(displayFormatter)
+                .setFileFilter(new ArticleFilter())
+                .visit(file);
+        String toc = articleVisitor.getToc();
+        return new AbstractMap.SimpleEntry(displayFormatter.articleNum, toc);
+    }
+
+    class ArticleFilter implements FileFilter {
+        @Override
+        public boolean accept(File file) {
+            String name = file.getName();
             if (name.endsWith(".todo")) {
                 return false;
             }
             return name.matches("\\d+\\..*") || name.endsWith(".md");
-        }));
-        StringBuilder sb = new StringBuilder();
-        for (File item : fileList) {
-            sb.append(StringUtils.repeat("\t", depth) + "- " + buildRelativePath(item) + "\n");
-            if (item.isDirectory()) {
-                sb.append(getTocContent(item, depth + 1));
-            } else {
-                docNum++;
+        }
+    }
+
+    class ArticleDisplayFormatter implements Function<File, String> {
+        String rootPath;
+        int articleNum = 0;
+
+        ArticleDisplayFormatter() {
+            try {
+                rootPath = readmeFile.getParentFile().getCanonicalPath();
+            } catch (IOException e) {
+                logger.error("", e);
             }
         }
-        return sb.toString();
-    }
 
-    private String buildRelativePath(File file) {
-        String tpl = "[%s](%s)";
-        String displayName;
-        int index;
-        if ((index = file.getName().indexOf(".md")) != -1) {
-            displayName = file.getName().substring(0, index);
-        } else {
-            displayName = file.getName();
-        }
-        String path = file.getAbsolutePath().substring(rootPath.toString().length() + 1);
-        return String.format(tpl, displayName, path);
-    }
+        @Override
+        public String apply(File file) {
+            if (file.isFile()) {
+                articleNum++;
+            }
 
-    private List<File> orderedFileList(File[] files) {
-        List<File> retList = new ArrayList<>(Arrays.asList(files));
-        retList.sort(new FileOrder());
-        return retList;
-    }
-
-    private void flushDisk() {
-        try {
-            FileUtils.writeStringToFile(README, retContent.toString(), UTF_8);
-        } catch (IOException e) { // ignore
+            String tpl = "- [%s](%s)";
+            String displayName;
+            int index;
+            if ((index = file.getName().indexOf(".md")) != -1) {
+                displayName = file.getName().substring(0, index);
+            } else {
+                displayName = file.getName();
+            }
+            String path = file.getAbsolutePath().substring(rootPath.length() + 1);
+            return String.format(tpl, displayName, path);
         }
     }
 
-    static class FileOrder implements Comparator<File> {
+    class FileOrder implements Comparator<File> {
         Pattern pattern = Pattern.compile("(\\d++)");
 
         @Override
@@ -113,5 +116,4 @@ public class ReadmeBuilder {
             }
         }
     }
-
 }
