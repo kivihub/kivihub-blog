@@ -50,7 +50,7 @@ public class ReadmeBuilder {
 
     private void appendTocBlog(StringBuilder readmeContent, File tocGroupFile, String tocGroupName) {
         Triple<Integer, Integer, String> triple = getTocContent(tocGroupFile);
-        String title = String.format("%s(总计:%s篇 字数:%s)\n", tocGroupName, triple.getLeft(), DECIMAL_FORMAT.format(triple.getMiddle()));
+        String title = String.format("%s(%s篇/%s字)\n", tocGroupName, triple.getLeft(), DECIMAL_FORMAT.format(triple.getMiddle()));
         readmeContent.append(title).append(triple.getRight());
     }
 
@@ -61,7 +61,7 @@ public class ReadmeBuilder {
                 .setArticleDisplayFormatter(displayFormatter)
                 .setDirDisplayFormatter(displayFormatter)
                 .setFileFilter(new ArticleFilter())
-                .setIndentation("\t")
+                .setIndentation("    ")
                 .visit(file);
         String toc = articleVisitor.getToc();
         return new ImmutableTriple<>(displayFormatter.articleNum, displayFormatter.totalWordsNum, toc);

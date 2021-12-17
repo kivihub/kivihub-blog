@@ -1,5 +1,7 @@
 package repo.tools.internal;
 
+import org.apache.commons.io.comparator.NameFileComparator;
+import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
@@ -15,10 +17,10 @@ import java.util.function.Function;
  */
 public class ArticleVisitor {
     private String indentation = "\t";
-    private Comparator<File> comparator;
-    private Function<File, String> articleDisplayFormatter;
-    private Function<File, String> dirDisplayFormatter;
-    private FileFilter fileFilter;
+    private Comparator<File> comparator = new NameFileComparator();
+    private Function<File, String> articleDisplayFormatter = s -> s.getName();
+    private Function<File, String> dirDisplayFormatter = s -> s.getName();
+    private FileFilter fileFilter = TrueFileFilter.INSTANCE;
     private StringBuilder toc = new StringBuilder();
 
     public void visit(File dir) {
