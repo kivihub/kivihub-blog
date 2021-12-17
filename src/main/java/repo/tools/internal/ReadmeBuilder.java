@@ -1,15 +1,17 @@
 package repo.tools.internal;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang3.tuple.ImmutableTriple;
+import org.apache.commons.lang3.tuple.Triple;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
-import java.util.AbstractMap;
+import java.text.DecimalFormat;
 import java.util.Comparator;
-import java.util.Map.Entry;
 import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -21,40 +23,48 @@ import static java.nio.charset.StandardCharsets.UTF_8;
  * @date 2021/01/23 10:33 AM
  */
 public class ReadmeBuilder {
-    private Logger logger = LoggerFactory.getLogger(ReadmeBuilder.class);
+    private final Logger logger = LoggerFactory.getLogger(ReadmeBuilder.class);
+    private final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("###,##0");
     private File readmeFile;
-    private String readmeContent;
 
     public ReadmeBuilder(File readmeFile) throws IOException {
         this.readmeFile = readmeFile.getCanonicalFile();
-        this.readmeContent = FileUtils.readFileToString(this.readmeFile, UTF_8);
     }
 
     public void buildToc() throws IOException {
-        String token = "#### 博客目录";
-        int index = readmeContent.indexOf(token);
-        if (index == -1) {
-            return;
-        }
-
-        Entry<Integer, String> tocEntry = getTocContent(new File(readmeFile, "../blog"));
-        readmeContent = readmeContent.substring(0, index + token.length()) +
-                " (总计:" + tocEntry.getKey() + "篇)\n"
-                + tocEntry.getValue();
-        FileUtils.writeStringToFile(readmeFile, readmeContent, UTF_8);
+        StringBuilder sb = new StringBuilder();
+        appendSection(sb, new File(readmeFile, "../src/main/resources/readme/head.md"));
+        sb.append("---\n");
+        appendTocBlog(sb, new File(readmeFile, "../shared"), "#### 总结分享");
+        sb.append("---\n");
+        appendTocBlog(sb, new File(readmeFile, "../blog"), "#### 博客目录");
+        sb.append("---\n");
+        appendSection(sb, new File(readmeFile, "../src/main/resources/readme/tail.md"));
+        FileUtils.writeStringToFile(readmeFile, sb.toString(), UTF_8);
         logger.info("Toc Build Success.");
     }
 
-    private Entry<Integer, String> getTocContent(File file) {
+    private void appendSection(StringBuilder readmeContent, File file) throws IOException {
+        readmeContent.append(FileUtils.readFileToString(file.getCanonicalFile(), UTF_8));
+    }
+
+    private void appendTocBlog(StringBuilder readmeContent, File tocGroupFile, String tocGroupName) {
+        Triple<Integer, Integer, String> triple = getTocContent(tocGroupFile);
+        String title = String.format("%s(总计:%s篇 字数:%s)\n", tocGroupName, triple.getLeft(), DECIMAL_FORMAT.format(triple.getMiddle()));
+        readmeContent.append(title).append(triple.getRight());
+    }
+
+    private Triple<Integer, Integer, String> getTocContent(File file) {
         ArticleDisplayFormatter displayFormatter = new ArticleDisplayFormatter();
         ArticleVisitor articleVisitor = new ArticleVisitor();
         articleVisitor.setArticleSorter(new FileOrder())
                 .setArticleDisplayFormatter(displayFormatter)
                 .setDirDisplayFormatter(displayFormatter)
                 .setFileFilter(new ArticleFilter())
+                .setIndentation("\t")
                 .visit(file);
         String toc = articleVisitor.getToc();
-        return new AbstractMap.SimpleEntry(displayFormatter.articleNum, toc);
+        return new ImmutableTriple<>(displayFormatter.articleNum, displayFormatter.totalWordsNum, toc);
     }
 
     class ArticleFilter implements FileFilter {
@@ -64,6 +74,7 @@ public class ReadmeBuilder {
             if (name.endsWith(".todo")) {
                 return false;
             }
+            // 前缀为数字 or 后缀为md
             return name.matches("\\d+\\..*") || name.endsWith(".md");
         }
     }
@@ -71,6 +82,7 @@ public class ReadmeBuilder {
     class ArticleDisplayFormatter implements Function<File, String> {
         String rootPath;
         int articleNum = 0;
+        int totalWordsNum = 0;
 
         ArticleDisplayFormatter() {
             try {
@@ -82,20 +94,40 @@ public class ReadmeBuilder {
 
         @Override
         public String apply(File file) {
+            String displayName = "md".equals(FilenameUtils.getExtension(file.getName())) ?
+                    FilenameUtils.getBaseName(file.getName()) : file.getName();
             if (file.isFile()) {
                 articleNum++;
+                int articleWord = getMsWordsCount(file);
+                totalWordsNum += articleWord;
+                displayName += " (字数:" + DECIMAL_FORMAT.format(articleWord) + ")";
             }
 
-            String tpl = "- [%s](%s)";
-            String displayName;
-            int index;
-            if ((index = file.getName().indexOf(".md")) != -1) {
-                displayName = file.getName().substring(0, index);
-            } else {
-                displayName = file.getName();
+            return String.format("- [%s](%s)", displayName, getRelativePath(file));
+        }
+
+        private String getRelativePath(File file) {
+            return file.getAbsolutePath().substring(rootPath.length() + 1);
+        }
+
+        private int getMsWordsCount(File file) {
+            String context;
+            try {
+                context = FileUtils.readFileToString(file, UTF_8);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-            String path = file.getAbsolutePath().substring(rootPath.length() + 1);
-            return String.format(tpl, displayName, path);
+            //中文单词
+            String cn_words = context.replaceAll("[^(\\u4e00-\\u9fa5，。《》？；’‘：“”【】、）（……￥！·)]", "");
+            int cn_words_count = cn_words.length();
+            //非中文单词
+            String non_cn_words = context.replaceAll("[^(a-zA-Z0-9`\\-=\';.,/~!@#$%^&*()_+|}{\":><?\\[\\])]", " ");
+            int non_cn_words_count = 0;
+            String[] ss = non_cn_words.split(" ");
+            for (String s : ss) {
+                if (s.trim().length() != 0) non_cn_words_count++;
+            }
+            return cn_words_count + non_cn_words_count;
         }
     }
 
