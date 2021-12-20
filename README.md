@@ -21,7 +21,7 @@
 - [Git分享 (字数:3,282)](shared/Git分享.md)
 
 ---
-#### 博客目录(255篇/179,713字)
+#### 博客目录(255篇/179,711字)
 - [0.TroubleShooting](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (字数:1,229)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -93,7 +93,7 @@
     - [20.slf4j使用 (字数:642)](blog/1.java/20.slf4j使用.md)
     - [21.System.err重定向到slf4j (字数:418)](blog/1.java/21.System.err重定向到slf4j.md)
     - [22.Java异常堆栈丢失仅剩一行 (字数:661)](blog/1.java/22.Java异常堆栈丢失仅剩一行.md)
-    - [23.Java日志无法通过echo清空？ (字数:781)](blog/1.java/23.Java日志无法通过echo清空？.md)
+    - [23.Java日志无法通过echo清空？ (字数:779)](blog/1.java/23.Java日志无法通过echo清空？.md)
 - [2.java并发](blog/2.java并发)
     - [1.JMM (字数:1,980)](blog/2.java并发/1.JMM.md)
     - [2.多处理器下的数据一致性 (字数:1,691)](blog/2.java并发/2.多处理器下的数据一致性.md)
