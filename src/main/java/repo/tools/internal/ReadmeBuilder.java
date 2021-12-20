@@ -34,11 +34,11 @@ public class ReadmeBuilder {
     public void buildToc() throws IOException {
         StringBuilder sb = new StringBuilder();
         appendSection(sb, new File(readmeFile, "../src/main/resources/readme/head.md"));
-        sb.append("---\n");
+        sb.append("\n---\n");
         appendTocBlog(sb, new File(readmeFile, "../shared"), "#### 总结分享");
-        sb.append("---\n");
+        sb.append("\n---\n");
         appendTocBlog(sb, new File(readmeFile, "../blog"), "#### 博客目录");
-        sb.append("---\n");
+        sb.append("\n---\n");
         appendSection(sb, new File(readmeFile, "../src/main/resources/readme/tail.md"));
         FileUtils.writeStringToFile(readmeFile, sb.toString(), UTF_8);
         logger.info("Toc Build Success.");
