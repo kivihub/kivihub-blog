@@ -21,7 +21,7 @@
 - [Git分享 (字数:3,282)](shared/Git分享.md)
 
 ---
-#### 博客目录(255篇/179,711字)
+#### 博客目录(256篇/179,749字)
 - [0.TroubleShooting](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (字数:1,229)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -87,7 +87,7 @@
     - [14.SFTP和FTPS，HTTPS (字数:207)](blog/1.java/14.SFTP和FTPS，HTTPS.md)
     - [15.使用hsdb查看运行时类 (字数:185)](blog/1.java/15.使用hsdb查看运行时类.md)
     - [16.Java_SPI细节 (字数:548)](blog/1.java/16.Java_SPI细节.md)
-    - [17.HttpClient连接池 (字数:647)](blog/1.java/17.HttpClient连接池.md)
+    - [17.HttpClient连接池 (字数:678)](blog/1.java/17.HttpClient连接池.md)
     - [18.Gson如何实例化类 (字数:397)](blog/1.java/18.Gson如何实例化类.md)
     - [19.HttpClient结构 (字数:450)](blog/1.java/19.HttpClient结构.md)
     - [20.slf4j使用 (字数:642)](blog/1.java/20.slf4j使用.md)
@@ -247,6 +247,7 @@
 - [15.脑图](blog/15.脑图)
     - [1.全脑记忆 (字数:13)](blog/15.脑图/1.全脑记忆.md)
     - [2.代码整洁之道 (字数:17)](blog/15.脑图/2.代码整洁之道.md)
+    - [3.数据密集型系统设计 (字数:7)](blog/15.脑图/3.数据密集型系统设计.md)
 - [16.工程实践](blog/16.工程实践)
     - [1.多应用混合部署 (字数:258)](blog/16.工程实践/1.多应用混合部署.md)
     - [2.尽早抽象和持续重构 (字数:512)](blog/16.工程实践/2.尽早抽象和持续重构.md)
