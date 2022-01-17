@@ -21,7 +21,7 @@
 - [Git分享 (字数:3,282)](shared/Git分享.md)
 
 ---
-#### 博客目录(256篇/179,749字)
+#### 博客目录(257篇/180,363字)
 - [0.TroubleShooting](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (字数:1,229)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -40,6 +40,7 @@
         - [13.Http上传文件的Content-Type格式 (字数:332)](blog/0.TroubleShooting/1.观察日志/13.Http上传文件的Content-Type格式.md)
         - [14.nginx反向代理自调用时小心Header里的host (字数:726)](blog/0.TroubleShooting/1.观察日志/14.nginx反向代理自调用时小心Header里的host.md)
         - [15.Webmethod的IS加入Cluster异常 (字数:1,112)](blog/0.TroubleShooting/1.观察日志/15.Webmethod的IS加入Cluster异常.md)
+        - [16.proxool的log4j冲突 (字数:614)](blog/0.TroubleShooting/1.观察日志/16.proxool的log4j冲突.md)
     - [2.Debug](blog/0.TroubleShooting/2.Debug)
         - [1.el中函数调用结果始终为null (字数:270)](blog/0.TroubleShooting/2.Debug/1.el中函数调用结果始终为null.md)
         - [2.Debug时科学观察变量 (字数:201)](blog/0.TroubleShooting/2.Debug/2.Debug时科学观察变量.md)
