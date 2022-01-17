@@ -21,7 +21,7 @@
 - [Git分享 (字数:3,282)](shared/Git分享.md)
 
 ---
-#### 博客目录(257篇/180,363字)
+#### 博客目录(257篇/180,397字)
 - [0.TroubleShooting](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (字数:1,229)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -40,7 +40,7 @@
         - [13.Http上传文件的Content-Type格式 (字数:332)](blog/0.TroubleShooting/1.观察日志/13.Http上传文件的Content-Type格式.md)
         - [14.nginx反向代理自调用时小心Header里的host (字数:726)](blog/0.TroubleShooting/1.观察日志/14.nginx反向代理自调用时小心Header里的host.md)
         - [15.Webmethod的IS加入Cluster异常 (字数:1,112)](blog/0.TroubleShooting/1.观察日志/15.Webmethod的IS加入Cluster异常.md)
-        - [16.proxool的log4j冲突 (字数:614)](blog/0.TroubleShooting/1.观察日志/16.proxool的log4j冲突.md)
+        - [16.proxool的log4j冲突 (字数:630)](blog/0.TroubleShooting/1.观察日志/16.proxool的log4j冲突.md)
     - [2.Debug](blog/0.TroubleShooting/2.Debug)
         - [1.el中函数调用结果始终为null (字数:270)](blog/0.TroubleShooting/2.Debug/1.el中函数调用结果始终为null.md)
         - [2.Debug时科学观察变量 (字数:201)](blog/0.TroubleShooting/2.Debug/2.Debug时科学观察变量.md)
@@ -155,7 +155,7 @@
     - [5.Maven仓库更新策略 (字数:556)](blog/6.maven/5.Maven仓库更新策略.md)
     - [6.DependencyManagment作用 (字数:103)](blog/6.maven/6.DependencyManagment作用.md)
     - [7.Maven的properties之生效原则 (字数:342)](blog/6.maven/7.Maven的properties之生效原则.md)
-    - [8.Maven常用命令 (字数:176)](blog/6.maven/8.Maven常用命令.md)
+    - [8.Maven常用命令 (字数:194)](blog/6.maven/8.Maven常用命令.md)
     - [9.Maven依赖解析分析 (字数:992)](blog/6.maven/9.Maven依赖解析分析.md)
     - [10.Maven源码分析 (字数:819)](blog/6.maven/10.Maven源码分析.md)
     - [11.Maven生命周期和插件MOJO (字数:232)](blog/6.maven/11.Maven生命周期和插件MOJO.md)
