@@ -12,6 +12,7 @@ import java.io.FileFilter;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.Comparator;
+import java.util.Locale;
 import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -71,7 +72,7 @@ public class ReadmeBuilder {
         @Override
         public boolean accept(File file) {
             String name = file.getName();
-            if (name.endsWith(".todo")) {
+            if (name.toLowerCase(Locale.ROOT).endsWith(".todo")) {
                 return false;
             }
             // 前缀为数字 or 后缀为md
