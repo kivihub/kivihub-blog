@@ -21,7 +21,7 @@
 - [Git分享 (字数:3,282)](shared/Git分享.md)
 
 ---
-#### 博客目录(260篇/183,560字)
+#### 博客目录(260篇/183,576字)
 - [0.TroubleShooting](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (字数:1,229)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -212,7 +212,7 @@
     - [6.Camel的Exchange分析 (字数:772)](blog/9.源码/6.Camel的Exchange分析.md)
     - [7.slf4j加载实现 (字数:464)](blog/9.源码/7.slf4j加载实现.md)
 - [10.工具](blog/10.工具)
-    - [1.日常使用-Ubuntu (字数:1,917)](blog/10.工具/1.日常使用-Ubuntu.md)
+    - [1.日常使用-Ubuntu (字数:1,933)](blog/10.工具/1.日常使用-Ubuntu.md)
     - [2.日常使用-Mac (字数:81)](blog/10.工具/2.日常使用-Mac.md)
     - [3.日常使用-IDEA (字数:472)](blog/10.工具/3.日常使用-IDEA.md)
     - [4.日常使用-Chrome (字数:269)](blog/10.工具/4.日常使用-Chrome.md)
