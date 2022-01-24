@@ -21,7 +21,7 @@
 - [Git分享 (字数:3,282)](shared/Git分享.md)
 
 ---
-#### 博客目录(260篇/183,110字)
+#### 博客目录(260篇/183,560字)
 - [0.TroubleShooting](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (字数:1,229)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -154,7 +154,7 @@
     - [4.Maven仓库类型 (字数:694)](blog/6.maven/4.Maven仓库类型.md)
     - [5.Maven仓库更新策略 (字数:556)](blog/6.maven/5.Maven仓库更新策略.md)
     - [6.DependencyManagment作用 (字数:103)](blog/6.maven/6.DependencyManagment作用.md)
-    - [7.Maven的properties之生效原则 (字数:342)](blog/6.maven/7.Maven的properties之生效原则.md)
+    - [7.Maven属性替换 (字数:792)](blog/6.maven/7.Maven属性替换.md)
     - [8.Maven常用命令 (字数:195)](blog/6.maven/8.Maven常用命令.md)
     - [9.Maven依赖协调原则及依赖顺序的影响 (字数:375)](blog/6.maven/9.Maven依赖协调原则及依赖顺序的影响.md)
     - [10.打包后-JAR包名为时间戳orSNAPSHOT (字数:463)](blog/6.maven/10.打包后-JAR包名为时间戳orSNAPSHOT.md)
