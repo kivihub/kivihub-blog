@@ -21,7 +21,7 @@
 - [Git分享 (字数:3,282)](shared/Git分享.md)
 
 ---
-#### 博客目录(261篇/185,967字)
+#### 博客目录(262篇/186,138字)
 - [0.TroubleShooting](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (字数:1,229)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -160,11 +160,12 @@
     - [10.打包后-JAR包名为时间戳orSNAPSHOT (字数:463)](blog/6.maven/10.打包后-JAR包名为时间戳orSNAPSHOT.md)
     - [11.Maven生命周期和插件MOJO (字数:602)](blog/6.maven/11.Maven生命周期和插件MOJO.md)
     - [12.Maven分类classifier使用 (字数:368)](blog/6.maven/12.Maven分类classifier使用.md)
-    - [13.Maven源码-模块说明 (字数:313)](blog/6.maven/13.Maven源码-模块说明.md)
+    - [13.Maven源码-模块说明 (字数:325)](blog/6.maven/13.Maven源码-模块说明.md)
     - [14.Maven源码-调试方法 (字数:169)](blog/6.maven/14.Maven源码-调试方法.md)
     - [15.Maven源码-主流程 (字数:1,053)](blog/6.maven/15.Maven源码-主流程.md)
     - [16.Maven源码-依赖解析 (字数:2,108)](blog/6.maven/16.Maven源码-依赖解析.md)
     - [17.Maven并行参数加快编译 (字数:382)](blog/6.maven/17.Maven并行参数加快编译.md)
+    - [18.Maven如何处理循环依赖 (字数:159)](blog/6.maven/18.Maven如何处理循环依赖.md)
 - [7.git](blog/7.git)
     - [0.序言 (字数:150)](blog/7.git/0.序言.md)
     - [1.VCS简介 (字数:1,524)](blog/7.git/1.VCS简介.md)
