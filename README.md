@@ -21,7 +21,7 @@
 - [Git分享 (字数:3,282)](shared/Git分享.md)
 
 ---
-#### 博客目录(262篇/186,235字)
+#### 博客目录(263篇/186,422字)
 - [0.TroubleShooting](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (字数:1,229)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -166,6 +166,7 @@
     - [16.Maven源码-依赖解析 (字数:2,108)](blog/6.maven/16.Maven源码-依赖解析.md)
     - [17.Maven并行参数加快编译 (字数:382)](blog/6.maven/17.Maven并行参数加快编译.md)
     - [18.Maven如何处理循环依赖 (字数:159)](blog/6.maven/18.Maven如何处理循环依赖.md)
+    - [19.Maven查看模块依赖图 (字数:187)](blog/6.maven/19.Maven查看模块依赖图.md)
 - [7.git](blog/7.git)
     - [0.序言 (字数:150)](blog/7.git/0.序言.md)
     - [1.VCS简介 (字数:1,524)](blog/7.git/1.VCS简介.md)
