@@ -21,7 +21,7 @@
 - [Git分享 (字数:3,282)](shared/Git分享.md)
 
 ---
-#### 博客目录(263篇/186,451字)
+#### 博客目录(264篇/186,935字)
 - [0.TroubleShooting](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (字数:1,229)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -149,7 +149,7 @@
     - [18.left_join时on后多条件AND (字数:562)](blog/5.mysql/18.left_join时on后多条件AND.md)
 - [6.maven](blog/6.maven)
     - [1.mvn_clean_deploy出错 (字数:159)](blog/6.maven/1.mvn_clean_deploy出错.md)
-    - [2.mvn_dependency_tree和mvn_clean_install的依赖不一致 (字数:409)](blog/6.maven/2.mvn_dependency_tree和mvn_clean_install的依赖不一致.md)
+    - [2.mvn_dependency_tree和mvn_clean_install的依赖不一致 (字数:486)](blog/6.maven/2.mvn_dependency_tree和mvn_clean_install的依赖不一致.md)
     - [3.maven插件的依赖的查找顺序 (字数:244)](blog/6.maven/3.maven插件的依赖的查找顺序.md)
     - [4.Maven仓库类型 (字数:694)](blog/6.maven/4.Maven仓库类型.md)
     - [5.Maven仓库更新策略 (字数:556)](blog/6.maven/5.Maven仓库更新策略.md)
@@ -167,6 +167,7 @@
     - [17.Maven并行参数加快编译 (字数:382)](blog/6.maven/17.Maven并行参数加快编译.md)
     - [18.Maven如何处理循环依赖 (字数:159)](blog/6.maven/18.Maven如何处理循环依赖.md)
     - [19.Maven查看模块依赖图 (字数:187)](blog/6.maven/19.Maven查看模块依赖图.md)
+    - [20.Maven3.x兼容笔记 (字数:407)](blog/6.maven/20.Maven3.x兼容笔记.md)
 - [7.git](blog/7.git)
     - [0.序言 (字数:150)](blog/7.git/0.序言.md)
     - [1.VCS简介 (字数:1,524)](blog/7.git/1.VCS简介.md)
