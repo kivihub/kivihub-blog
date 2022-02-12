@@ -72,7 +72,7 @@ public class ReadmeBuilder {
         @Override
         public boolean accept(File file) {
             String name = file.getName();
-            if (name.toLowerCase(Locale.ROOT).endsWith(".todo")) {
+            if (name.toLowerCase(Locale.ROOT).endsWith(".todo") || name.toLowerCase(Locale.ROOT).contains("ignore")) {
                 return false;
             }
             // 前缀为数字 or 后缀为md
