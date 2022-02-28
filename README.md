@@ -21,7 +21,7 @@
 - [Git分享 (字数:3,282)](shared/Git分享.md)
 
 ---
-#### 博客目录(265篇/188,282字)
+#### 博客目录(266篇/191,897字)
 - [0.TroubleShooting](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (字数:1,229)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志](blog/0.TroubleShooting/1.观察日志)
@@ -180,7 +180,7 @@
     - [10.配置difftool为beyondCompare (字数:38)](blog/7.git/10.配置difftool为beyondCompare.md)
     - [11.fatal：Authentication_failed (字数:83)](blog/7.git/11.fatal：Authentication_failed.md)
     - [12.查看谁修改了我的文件 (字数:214)](blog/7.git/12.查看谁修改了我的文件.md)
-    - [13.git_log_--follow解惑 (字数:105)](blog/7.git/13.git_log_--follow解惑.md)
+    - [13.git_log_--follow解惑 (字数:159)](blog/7.git/13.git_log_--follow解惑.md)
     - [14.Mac,Windows文件不区分大小带来的困惑 (字数:244)](blog/7.git/14.Mac,Windows文件不区分大小带来的困惑.md)
     - [15.删除远程分支失败 (字数:101)](blog/7.git/15.删除远程分支失败.md)
     - [16.手动合并分支的技巧 (字数:308)](blog/7.git/16.手动合并分支的技巧.md)
@@ -313,6 +313,7 @@
 - [22.算法](blog/22.算法)
     - [1.排序 (字数:705)](blog/22.算法/1.排序.md)
     - [2.深度广度搜索 (字数:289)](blog/22.算法/2.深度广度搜索.md)
+    - [3.算法题型总结 (字数:3,561)](blog/22.算法/3.算法题型总结.md)
 - [23.转载](blog/23.转载)
     - [1.安全VPN封装大法之万法归宗 (字数:3,358)](blog/23.转载/1.安全VPN封装大法之万法归宗.md)
 - [24.容器](blog/24.容器)
