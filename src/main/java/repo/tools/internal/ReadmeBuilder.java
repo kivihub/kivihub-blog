@@ -1,7 +1,10 @@
 package repo.tools.internal;
 
+import org.apache.commons.io.FileSystemUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.filefilter.IOFileFilter;
+import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.apache.commons.lang3.tuple.ImmutableTriple;
 import org.apache.commons.lang3.tuple.Triple;
 import org.slf4j.Logger;
@@ -56,19 +59,20 @@ public class ReadmeBuilder {
     }
 
     private Triple<Integer, Integer, String> getTocContent(File file) {
-        ArticleDisplayFormatter displayFormatter = new ArticleDisplayFormatter();
+        ArticleFilter articleFilter = new ArticleFilter();
+        ArticleDisplayFormatter displayFormatter = new ArticleDisplayFormatter(articleFilter);
         ArticleVisitor articleVisitor = new ArticleVisitor();
         articleVisitor.setArticleSorter(new FileOrder())
                 .setArticleDisplayFormatter(displayFormatter)
                 .setDirDisplayFormatter(displayFormatter)
-                .setFileFilter(new ArticleFilter())
+                .setFileFilter(articleFilter)
                 .setIndentation("    ")
                 .visit(file);
         String toc = articleVisitor.getToc();
         return new ImmutableTriple<>(displayFormatter.articleNum, displayFormatter.totalWordsNum, toc);
     }
 
-    class ArticleFilter implements FileFilter {
+    class ArticleFilter implements IOFileFilter {
         @Override
         public boolean accept(File file) {
             String name = file.getName();
@@ -78,14 +82,21 @@ public class ReadmeBuilder {
             // 前缀为数字 or 后缀为md
             return name.matches("\\d+\\..*") || name.endsWith(".md");
         }
+
+        @Override
+        public boolean accept(File file, String s) {
+            return false;
+        }
     }
 
     class ArticleDisplayFormatter implements Function<File, String> {
+        ArticleFilter articleFilter;
         String rootPath;
         int articleNum = 0;
         int totalWordsNum = 0;
 
-        ArticleDisplayFormatter() {
+        ArticleDisplayFormatter(ArticleFilter articleFilter) {
+            this.articleFilter = articleFilter;
             try {
                 rootPath = readmeFile.getParentFile().getCanonicalPath();
             } catch (IOException e) {
@@ -97,11 +108,19 @@ public class ReadmeBuilder {
         public String apply(File file) {
             String displayName = "md".equals(FilenameUtils.getExtension(file.getName())) ?
                     FilenameUtils.getBaseName(file.getName()) : file.getName();
+            try {
+                file = file.getCanonicalFile();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             if (file.isFile()) {
                 articleNum++;
                 int articleWord = getMsWordsCount(file);
                 totalWordsNum += articleWord;
-                displayName += " (字数:" + DECIMAL_FORMAT.format(articleWord) + ")";
+                displayName += " (" + DECIMAL_FORMAT.format(articleWord) + "字)";
+            } else {
+                int fileCount = FileUtils.listFiles(file, articleFilter, TrueFileFilter.INSTANCE).size();
+                displayName += " (" + fileCount + "篇)";
             }
 
             return String.format("- [%s](%s)", displayName, getRelativePath(file));
