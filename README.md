@@ -21,7 +21,7 @@
 - [Git分享 (3,282字)](shared/Git分享.md)
 
 ---
-#### 博客目录(261篇/202,416字)
+#### 博客目录(261篇/202,429字)
 - [0.TroubleShooting (43篇)](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/0.TroubleShooting/1.观察日志)
@@ -205,7 +205,7 @@
     - [4.Tomcat类加载器 (1,875字)](blog/9.源码/4.Tomcat类加载器.md)
     - [5.从SocketTimeout，ReadTimeout来看源码 (122字)](blog/9.源码/5.从SocketTimeout，ReadTimeout来看源码.md)
     - [6.Camel的Exchange分析 (772字)](blog/9.源码/6.Camel的Exchange分析.md)
-    - [7.slf4j加载实现 (464字)](blog/9.源码/7.slf4j加载实现.md)
+    - [7.slf4j加载实现 (477字)](blog/9.源码/7.slf4j加载实现.md)
     - [8.HttpClient（一）连接池 (678字)](blog/9.源码/8.HttpClient（一）连接池.md)
     - [9.HttpClient（二）结构 (450字)](blog/9.源码/9.HttpClient（二）结构.md)
     - [10.HttpClient（三）连接池获取连接 (1,280字)](blog/9.源码/10.HttpClient（三）连接池获取连接.md)
