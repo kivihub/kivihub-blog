@@ -21,7 +21,7 @@
 - [Git分享 (3,282字)](shared/Git分享.md)
 
 ---
-#### 博客目录(254篇/203,195字)
+#### 博客目录(254篇/203,381字)
 - [0.TroubleShooting (43篇)](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/0.TroubleShooting/1.观察日志)
@@ -106,10 +106,10 @@
 - [3.jvm (7篇)](blog/3.jvm)
     - [1.类加载机制 (1,809字)](blog/3.jvm/1.类加载机制.md)
     - [2.Java运行时内存区域 (604字)](blog/3.jvm/2.Java运行时内存区域.md)
-    - [3.垃圾回收 (1,454字)](blog/3.jvm/3.垃圾回收.md)
-    - [4.垃圾回收器 (2,325字)](blog/3.jvm/4.垃圾回收器.md)
+    - [3.垃圾回收 (1,472字)](blog/3.jvm/3.垃圾回收.md)
+    - [4.垃圾回收器 (2,402字)](blog/3.jvm/4.垃圾回收器.md)
     - [5.JDK自带的性能监控工具 (305字)](blog/3.jvm/5.JDK自带的性能监控工具.md)
-    - [6.字节码解释器和JIT (135字)](blog/3.jvm/6.字节码解释器和JIT.md)
+    - [6.字节码解释器和JIT (226字)](blog/3.jvm/6.字节码解释器和JIT.md)
     - [7.JVM运行参数 (233字)](blog/3.jvm/7.JVM运行参数.md)
 - [4.spring (11篇)](blog/4.spring)
     - [0.Spring扩展点 (217字)](blog/4.spring/0.Spring扩展点.md)
