@@ -21,7 +21,7 @@
 - [Git分享 (3,282字)](shared/Git分享.md)
 
 ---
-#### 博客目录(246篇/203,876字)
+#### 博客目录(246篇/203,877字)
 - [0.TroubleShooting (43篇)](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/0.TroubleShooting/1.观察日志)
@@ -286,7 +286,7 @@
     - [6.从Filter和Interceptor看责任链模式 (1,771字)](blog/18.设计模式/6.从Filter和Interceptor看责任链模式.md)
 - [19.RPC框架 (8篇)](blog/19.RPC框架)
     - [1.Dubbo速览 (710字)](blog/19.RPC框架/1.Dubbo速览.md)
-    - [2.Dubbo扩展点 (1,039字)](blog/19.RPC框架/2.Dubbo扩展点.md)
+    - [2.Dubbo扩展点 (1,040字)](blog/19.RPC框架/2.Dubbo扩展点.md)
     - [3.Dubbo服务发布源码分析 (1,590字)](blog/19.RPC框架/3.Dubbo服务发布源码分析.md)
     - [4.Dubbo服务引入源码分析 (3,061字)](blog/19.RPC框架/4.Dubbo服务引入源码分析.md)
     - [5.Dubbo服务调用源码分析 (41字)](blog/19.RPC框架/5.Dubbo服务调用源码分析.md)
