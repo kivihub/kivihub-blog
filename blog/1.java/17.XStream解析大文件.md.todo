@@ -1,0 +1,12 @@
+> You can use StaxDriver for parsing, if you are using DomDriver. StAX parser does not build entire Object Model at once, it only built relevant information is required. It minimizes the memory requirement and improve the performance. You can use like this:
+>
+> ```java
+> XStream xstream = new XStream(new StaxDriver());
+> ```
+
+
+
+## 参考
+
+1. https://stackoverflow.com/questions/28669959/xml-parsing-using-xstream-is-too-slow-for-large-xml-file-in-android
+2. http://x-stream.github.io/benchmarks.html
