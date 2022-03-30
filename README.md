@@ -21,7 +21,7 @@
 - [Git分享 (3,282字)](shared/Git分享.md)
 
 ---
-#### 博客目录(249篇/206,467字)
+#### 博客目录(249篇/206,768字)
 - [0.TroubleShooting (43篇)](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/0.TroubleShooting/1.观察日志)
@@ -302,7 +302,7 @@
 - [21.转载 (1篇)](blog/21.转载)
     - [1.安全VPN封装大法之万法归宗 (3,358字)](blog/21.转载/1.安全VPN封装大法之万法归宗.md)
 - [22.算法 (2篇)](blog/22.算法)
-    - [1.排序 (705字)](blog/22.算法/1.排序.md)
+    - [1.排序 (1,006字)](blog/22.算法/1.排序.md)
     - [2.算法题型总结 (8,603字)](blog/22.算法/2.算法题型总结.md)
 
 ---
