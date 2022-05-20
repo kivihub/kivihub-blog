@@ -4,7 +4,6 @@ import repo.tools.internal.ReadmeBuilder;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 
 /**
  * @author wangqiwei

@@ -1,0 +1,12 @@
+#!/bin/bash
+echo -e "\033[33mPWD: `pwd`\033[0m"
+echo -e "\033[32mSTR: run git hook\033[0m"
+
+echo -e "    ==>Step 1: run pre-commit.jar to update README.md"
+java -jar hooks/pre-commit.jar 1>/dev/null 2>&1
+echo -e "    Success"
+echo -e "    ==>Step 2: git add README.md"
+git add README.md
+echo -e "    Success"
+
+echo -e "\033[32mEND: run git hook\033[0m\n"

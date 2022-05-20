@@ -2,10 +2,11 @@
 
 >  非学无以广才，非志无以成学。     —— 诫子书
 
-
-本仓库初次提交的内容来自[简书—此间有道](https://www.jianshu.com/u/385b00f9ba9b)。由于简书每天限制发布次数，且广告很多。故于2021-01-15迁移之前文章于此。简书自此作为Follower角色，不定时同步本仓库内容。
-
-
+#### GIT钩子配置
+使用pre-commit钩子，每次提交前会自动更新README.md
+```shell
+cp hooks/pre-commit .git/hooks/
+```
 #### 仓库目录
 
 | 目录                          | 分类           | 介绍                                        |
@@ -21,7 +22,7 @@
 - [Git分享 (3,282字)](shared/Git分享.md)
 
 ---
-#### 博客目录(250篇/207,099字)
+#### 博客目录(251篇/208,639字)
 - [0.TroubleShooting (43篇)](blog/0.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/0.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/0.TroubleShooting/1.观察日志)
@@ -180,11 +181,12 @@
     - [20.sparse_checkout (87字)](blog/7.git/20.sparse_checkout.md)
     - [21.git提交规范 (195字)](blog/7.git/21.git提交规范.md)
     - [22.常见问题 (1,141字)](blog/7.git/22.常见问题.md)
-- [8.linux (4篇)](blog/8.linux)
+- [8.linux (5篇)](blog/8.linux)
     - [1.CPU使用率和负载 (1,464字)](blog/8.linux/1.CPU使用率和负载.md)
     - [2.Debian包管理 (997字)](blog/8.linux/2.Debian包管理.md)
     - [3.同步异步和阻塞非阻塞 (355字)](blog/8.linux/3.同步异步和阻塞非阻塞.md)
     - [4.User_vs_Kernel (552字)](blog/8.linux/4.User_vs_Kernel.md)
+    - [5.Vim笔记 (1,369字)](blog/8.linux/5.Vim笔记.md)
 - [9.源码 (10篇)](blog/9.源码)
     - [1.while(true)和for(;;)分析 (178字)](blog/9.源码/1.while(true)和for(;;)分析.md)
     - [2.Junit源码分析 (741字)](blog/9.源码/2.Junit源码分析.md)
@@ -197,10 +199,10 @@
     - [9.HttpClient（二）结构 (450字)](blog/9.源码/9.HttpClient（二）结构.md)
     - [10.HttpClient（三）连接池获取连接 (1,280字)](blog/9.源码/10.HttpClient（三）连接池获取连接.md)
 - [10.工具 (7篇)](blog/10.工具)
-    - [1.日常使用-Ubuntu (2,169字)](blog/10.工具/1.日常使用-Ubuntu.md)
+    - [1.日常使用-Ubuntu (2,190字)](blog/10.工具/1.日常使用-Ubuntu.md)
     - [2.日常使用-Mac (99字)](blog/10.工具/2.日常使用-Mac.md)
     - [3.日常使用-IDEA (472字)](blog/10.工具/3.日常使用-IDEA.md)
-    - [4.日常使用-Chrome (269字)](blog/10.工具/4.日常使用-Chrome.md)
+    - [4.日常使用-Chrome (419字)](blog/10.工具/4.日常使用-Chrome.md)
     - [5.日常使用-杂 (63字)](blog/10.工具/5.日常使用-杂.md)
     - [6.sshuttle使用 (211字)](blog/10.工具/6.sshuttle使用.md)
     - [7.openfortivpn使用 (349字)](blog/10.工具/7.openfortivpn使用.md)
