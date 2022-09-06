@@ -3,10 +3,6 @@
 > Author： 王奇伟
 >
 > Date：2020/08/19
->
-> 本文基于：https://www.jianshu.com/nb/21019832
->
-> 本文源码：https://git.jd.com/wangqiwei7/share-with-team.git
 
 #### 零、EDI应用
 
@@ -287,6 +283,7 @@ git fiter-branch
 ###### 1）恢复到指定版本
 
 ```
+// 事例：dev分支恢复到历史revision
 git reset --hard revision
 git reset --soft origin/dev
 git commit

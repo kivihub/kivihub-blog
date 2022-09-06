@@ -18,8 +18,8 @@ cp hooks/pre-commit .git/hooks/
 | */src/main/java/repo/tools*   | **仓库工具**   | 自动生成README.md                           |
 | */src/main/resources/readme*  | **README片段** | 用于生成README.md的片段，如head.md，tail.md |
 ---
-#### 总结分享(1篇/3,282字)
-- [Git分享 (3,282字)](shared/Git分享.md)
+#### 总结分享(1篇/3,279字)
+- [Git分享 (3,279字)](shared/Git分享.md)
 
 ---
 #### 博客目录(249篇/208,406字)
