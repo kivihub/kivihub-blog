@@ -22,7 +22,7 @@ cp hooks/pre-commit .git/hooks/
 - [Git分享 (3,279字)](shared/Git分享.md)
 
 ---
-#### 博客目录(254篇/209,241字)
+#### 博客目录(255篇/209,637字)
 - [1.TroubleShooting (43篇)](blog/1.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/1.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/1.TroubleShooting/1.观察日志)
@@ -186,7 +186,7 @@ cp hooks/pre-commit .git/hooks/
     - [20.sparse_checkout (87字)](blog/7.git/20.sparse_checkout.md)
     - [21.git提交规范 (195字)](blog/7.git/21.git提交规范.md)
     - [22.常见问题 (1,141字)](blog/7.git/22.常见问题.md)
-- [8.linux (7篇)](blog/8.linux)
+- [8.linux (8篇)](blog/8.linux)
     - [1.CPU使用率和负载 (1,464字)](blog/8.linux/1.CPU使用率和负载.md)
     - [2.Debian包管理 (997字)](blog/8.linux/2.Debian包管理.md)
     - [3.同步异步和阻塞非阻塞 (355字)](blog/8.linux/3.同步异步和阻塞非阻塞.md)
@@ -194,6 +194,7 @@ cp hooks/pre-commit .git/hooks/
     - [5.Vim笔记 (1,369字)](blog/8.linux/5.Vim笔记.md)
     - [6.OOM_Killer (259字)](blog/8.linux/6.OOM_Killer.md)
     - [7.进程运行信息 (109字)](blog/8.linux/7.进程运行信息.md)
+    - [8.shell脚本编写 (396字)](blog/8.linux/8.shell脚本编写.md)
 - [9.源码 (10篇)](blog/9.源码)
     - [1.while(true)和for(;;)分析 (178字)](blog/9.源码/1.while(true)和for(;;)分析.md)
     - [2.Junit源码分析 (741字)](blog/9.源码/2.Junit源码分析.md)
