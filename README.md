@@ -22,7 +22,7 @@ cp hooks/pre-commit .git/hooks/
 - [Git分享 (3,279字)](shared/Git分享.md)
 
 ---
-#### 博客目录(255篇/209,665字)
+#### 博客目录(256篇/209,721字)
 - [1.TroubleShooting (43篇)](blog/1.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/1.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/1.TroubleShooting/1.观察日志)
@@ -162,7 +162,7 @@ cp hooks/pre-commit .git/hooks/
     - [18.Maven如何处理循环依赖 (159字)](blog/6.maven/18.Maven如何处理循环依赖.md)
     - [19.Maven查看模块依赖图 (187字)](blog/6.maven/19.Maven查看模块依赖图.md)
     - [20.Maven3.x兼容笔记 (407字)](blog/6.maven/20.Maven3.x兼容笔记.md)
-- [7.git (23篇)](blog/7.git)
+- [7.git (24篇)](blog/7.git)
     - [0.序言 (150字)](blog/7.git/0.序言.md)
     - [1.VCS简介 (1,556字)](blog/7.git/1.VCS简介.md)
     - [2.Git内部原理 (2,361字)](blog/7.git/2.Git内部原理.md)
@@ -186,6 +186,7 @@ cp hooks/pre-commit .git/hooks/
     - [20.sparse_checkout (87字)](blog/7.git/20.sparse_checkout.md)
     - [21.git提交规范 (195字)](blog/7.git/21.git提交规范.md)
     - [22.常见问题 (1,141字)](blog/7.git/22.常见问题.md)
+    - [23.git分析工具 (56字)](blog/7.git/23.git分析工具.md)
 - [8.linux (8篇)](blog/8.linux)
     - [1.CPU使用率和负载 (1,464字)](blog/8.linux/1.CPU使用率和负载.md)
     - [2.Debian包管理 (997字)](blog/8.linux/2.Debian包管理.md)
