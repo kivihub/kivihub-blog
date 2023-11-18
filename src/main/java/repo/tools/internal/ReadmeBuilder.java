@@ -121,7 +121,7 @@ public class ReadmeBuilder {
                 displayName += " (" + fileCount + "篇)";
             }
 
-            return String.format("- [%s](%s)", displayName, getRelativePath(file));
+            return String.format("- [%s](%s)", displayName, getRelativePath(file).replaceAll("\\\\","/"));
         }
 
         private String getRelativePath(File file) {
