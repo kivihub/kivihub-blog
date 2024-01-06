@@ -22,7 +22,7 @@ cp hooks/pre-commit .git/hooks/
 - [Git分享 (3,279字)](shared/Git分享.md)
 
 ---
-#### 博客目录(256篇/209,716字)
+#### 博客目录(256篇/209,738字)
 - [1.TroubleShooting (43篇)](blog/1.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/1.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/1.TroubleShooting/1.观察日志)
@@ -263,7 +263,7 @@ cp hooks/pre-commit .git/hooks/
 - [10.工具 (7篇)](blog/10.工具)
     - [1.日常使用-Ubuntu (2,388字)](blog/10.工具/1.日常使用-Ubuntu.md)
     - [2.日常使用-Mac (247字)](blog/10.工具/2.日常使用-Mac.md)
-    - [3.日常使用-IDEA&Goland (530字)](blog/10.工具/3.日常使用-IDEA&Goland.md)
+    - [3.日常使用-IDEA&Goland (552字)](blog/10.工具/3.日常使用-IDEA&Goland.md)
     - [4.日常使用-Chrome (430字)](blog/10.工具/4.日常使用-Chrome.md)
     - [5.日常使用-杂 (63字)](blog/10.工具/5.日常使用-杂.md)
     - [6.sshuttle使用 (211字)](blog/10.工具/6.sshuttle使用.md)
