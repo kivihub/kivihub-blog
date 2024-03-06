@@ -22,7 +22,7 @@ cp hooks/pre-commit .git/hooks/
 - [Git分享 (3,279字)](shared/Git分享.md)
 
 ---
-#### 博客目录(256篇/210,017字)
+#### 博客目录(257篇/210,041字)
 - [1.TroubleShooting (43篇)](blog/1.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/1.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/1.TroubleShooting/1.观察日志)
@@ -72,7 +72,8 @@ cp hooks/pre-commit .git/hooks/
         - [1.单元测试才是绩效的保命符 (425字)](blog/1.TroubleShooting/5.单元测试/1.单元测试才是绩效的保命符.md)
         - [2.numVar=2，但${numVar除1000}为什么是0？ (321字)](blog/1.TroubleShooting/5.单元测试/2.numVar=2，但${numVar除1000}为什么是0？.md)
         - [3.因浮点精度损失了1分钱 (2,544字)](blog/1.TroubleShooting/5.单元测试/3.因浮点精度损失了1分钱.md)
-- [2.Golang (3篇)](blog/2.Golang)
+- [2.Golang (4篇)](blog/2.Golang)
+    - [0.环境准备 (24字)](blog/2.Golang/0.环境准备.md)
     - [1.go包和模块 (389字)](blog/2.Golang/1.go包和模块.md)
     - [2.共享变量 (646字)](blog/2.Golang/2.共享变量.md)
     - [3.依赖树查看 (117字)](blog/2.Golang/3.依赖树查看.md)
