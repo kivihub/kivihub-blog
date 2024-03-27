@@ -22,7 +22,7 @@ cp hooks/pre-commit .git/hooks/
 - [Git分享 (3,279字)](shared/Git分享.md)
 
 ---
-#### 博客目录(257篇/210,143字)
+#### 博客目录(258篇/210,253字)
 - [1.TroubleShooting (43篇)](blog/1.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/1.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/1.TroubleShooting/1.观察日志)
@@ -309,11 +309,12 @@ cp hooks/pre-commit .git/hooks/
     - [1.全脑记忆 (13字)](blog/15.庸人自扰/1.全脑记忆.md)
     - [2.工作和学习 (1,622字)](blog/15.庸人自扰/2.工作和学习.md)
     - [3.新鲜的鸡汤 (1,959字)](blog/15.庸人自扰/3.新鲜的鸡汤.md)
-- [16.工作那些事 (4篇)](blog/16.工作那些事)
+- [16.工作那些事 (5篇)](blog/16.工作那些事)
     - [1.关于会议 (1,518字)](blog/16.工作那些事/1.关于会议.md)
     - [2.关于信息同步 (1,397字)](blog/16.工作那些事/2.关于信息同步.md)
     - [3.关于规划 (1,289字)](blog/16.工作那些事/3.关于规划.md)
     - [4.关于项目目标 (416字)](blog/16.工作那些事/4.关于项目目标.md)
+    - [5.[WIP]FindWork (110字)](blog/16.工作那些事/5.[WIP]FindWork.md)
 
 ---
 *...我也是有底线的...*
