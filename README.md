@@ -22,7 +22,7 @@ cp hooks/pre-commit .git/hooks/
 - [Git分享 (3,279字)](shared/Git分享.md)
 
 ---
-#### 博客目录(261篇/220,006字)
+#### 博客目录(261篇/220,138字)
 - [1.TroubleShooting (43篇)](blog/1.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/1.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/1.TroubleShooting/1.观察日志)
@@ -310,7 +310,7 @@ cp hooks/pre-commit .git/hooks/
     - [2.工作和学习 (1,622字)](blog/15.杂谈/2.工作和学习.md)
     - [3.央行的基础货币怎么流入市场 (226字)](blog/15.杂谈/3.央行的基础货币怎么流入市场.md)
 - [16.工作那些事 (8篇)](blog/16.工作那些事)
-    - [1.关于会议 (1,808字)](blog/16.工作那些事/1.关于会议.md)
+    - [1.关于会议 (1,940字)](blog/16.工作那些事/1.关于会议.md)
     - [2.关于信息同步 (1,397字)](blog/16.工作那些事/2.关于信息同步.md)
     - [3.关于规划 (1,289字)](blog/16.工作那些事/3.关于规划.md)
     - [4.关于项目目标 (416字)](blog/16.工作那些事/4.关于项目目标.md)
