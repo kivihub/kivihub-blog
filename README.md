@@ -22,7 +22,7 @@ cp hooks/pre-commit .git/hooks/
 - [Git分享 (3,279字)](shared/Git分享.md)
 
 ---
-#### 博客目录(261篇/220,138字)
+#### 博客目录(262篇/220,180字)
 - [1.TroubleShooting (43篇)](blog/1.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/1.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/1.TroubleShooting/1.观察日志)
@@ -261,7 +261,7 @@ cp hooks/pre-commit .git/hooks/
 - [9.算法 (2篇)](blog/9.算法)
     - [1.排序 (1,006字)](blog/9.算法/1.排序.md)
     - [2.算法题型总结 (8,603字)](blog/9.算法/2.算法题型总结.md)
-- [10.工具 (7篇)](blog/10.工具)
+- [10.工具 (8篇)](blog/10.工具)
     - [1.日常使用-Ubuntu (2,388字)](blog/10.工具/1.日常使用-Ubuntu.md)
     - [2.日常使用-Mac (550字)](blog/10.工具/2.日常使用-Mac.md)
     - [3.日常使用-IDEA&Goland (796字)](blog/10.工具/3.日常使用-IDEA&Goland.md)
@@ -269,6 +269,7 @@ cp hooks/pre-commit .git/hooks/
     - [5.日常使用-杂 (63字)](blog/10.工具/5.日常使用-杂.md)
     - [6.sshuttle使用 (211字)](blog/10.工具/6.sshuttle使用.md)
     - [7.openfortivpn使用 (349字)](blog/10.工具/7.openfortivpn使用.md)
+    - [8.Julia (42字)](blog/10.工具/8.Julia.md)
 - [11.网络 (8篇)](blog/11.网络)
     - [1.网络上行和下行 (124字)](blog/11.网络/1.网络上行和下行.md)
     - [2.负载均衡4层和7层区别 (301字)](blog/11.网络/2.负载均衡4层和7层区别.md)
