@@ -22,7 +22,7 @@ cp hooks/pre-commit .git/hooks/
 - [Git分享 (3,279字)](shared/Git分享.md)
 
 ---
-#### 博客目录(263篇/220,871字)
+#### 博客目录(264篇/221,418字)
 - [1.TroubleShooting (43篇)](blog/1.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/1.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/1.TroubleShooting/1.观察日志)
@@ -191,7 +191,7 @@ cp hooks/pre-commit .git/hooks/
     - [13.JDBC的时区调停 (459字)](blog/4.Mysql/13.JDBC的时区调停.md)
     - [14.分库分表 (517字)](blog/4.Mysql/14.分库分表.md)
     - [15.Mysql如何保证数据不丢失 (789字)](blog/4.Mysql/15.Mysql如何保证数据不丢失.md)
-- [5.Git (24篇)](blog/5.Git)
+- [5.Git (25篇)](blog/5.Git)
     - [0.序言 (150字)](blog/5.Git/0.序言.md)
     - [1.VCS简介 (1,556字)](blog/5.Git/1.VCS简介.md)
     - [2.Git内部原理 (2,361字)](blog/5.Git/2.Git内部原理.md)
@@ -216,6 +216,7 @@ cp hooks/pre-commit .git/hooks/
     - [21.git提交规范 (195字)](blog/5.Git/21.git提交规范.md)
     - [22.常见问题 (1,141字)](blog/5.Git/22.常见问题.md)
     - [23.git分析工具 (56字)](blog/5.Git/23.git分析工具.md)
+    - [24.合并两个仓库 (547字)](blog/5.Git/24.合并两个仓库.md)
 - [6.Linux (8篇)](blog/6.Linux)
     - [1.CPU使用率和负载 (1,464字)](blog/6.Linux/1.CPU使用率和负载.md)
     - [2.Debian包管理 (997字)](blog/6.Linux/2.Debian包管理.md)
