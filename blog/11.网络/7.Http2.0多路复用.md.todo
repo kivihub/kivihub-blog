@@ -2,11 +2,11 @@
 
 **HTTP多路复用指多个请求复用同一条TCP连接**
 
-![HTTP/2 multiplexes requests and responses over a single connection](../../src/main/resources/picture/Bartenev-conf2015-slide5_inside-multiplexing.png)
+![HTTP/2 multiplexes requests and responses over a single connection](pic/Bartenev-conf2015-slide5_inside-multiplexing.png)
 
 **IO多路复用指多个Socket复用一个事件监听器Selector，由它同一监听IO事件**
 
-<img src="../../src/main/resources/picture/image-20210124141255798.png" alt="image-20210124141255798" style="zoom:50%;" />
+<img src="pic/image-20210124141255798.png" alt="image-20210124141255798" style="zoom:50%;" />
 
 ### 二、超时属性
 

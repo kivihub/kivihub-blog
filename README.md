@@ -22,7 +22,7 @@ cp hooks/pre-commit .git/hooks/
 - [Git分享 (3,279字)](shared/Git分享.md)
 
 ---
-#### 博客目录(264篇/221,418字)
+#### 博客目录(264篇/221,365字)
 - [1.TroubleShooting (43篇)](blog/1.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/1.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/1.TroubleShooting/1.观察日志)
@@ -107,7 +107,7 @@ cp hooks/pre-commit .git/hooks/
         - [9.FutureTask构建高效缓存 (177字)](blog/3.Java/2.Java并发/9.FutureTask构建高效缓存.md)
     - [3.Java虚拟机 (7篇)](blog/3.Java/3.Java虚拟机)
         - [1.类加载机制 (2,307字)](blog/3.Java/3.Java虚拟机/1.类加载机制.md)
-        - [2.Java运行时内存区域 (674字)](blog/3.Java/3.Java虚拟机/2.Java运行时内存区域.md)
+        - [2.Java运行时内存区域 (621字)](blog/3.Java/3.Java虚拟机/2.Java运行时内存区域.md)
         - [3.垃圾回收 (1,472字)](blog/3.Java/3.Java虚拟机/3.垃圾回收.md)
         - [4.垃圾回收器 (2,402字)](blog/3.Java/3.Java虚拟机/4.垃圾回收器.md)
         - [5.JDK自带的性能监控工具 (305字)](blog/3.Java/3.Java虚拟机/5.JDK自带的性能监控工具.md)

@@ -6,7 +6,7 @@
 
 #### 零、EDI应用
 
-![image-20200819113225012](../src/main/resources/picture/image-20200819113225012.png)
+![image-20200819113225012](pic/image-20200819113225012.png)
 
 #### 一、 Git原理
 
@@ -14,11 +14,11 @@
 
 ###### 1）没有VCS
 
-<img src="../src/main/resources/picture/image-20200816162958788.png" alt="image-20200816162958788" style="zoom: 50%;" />
+<img src="pic/image-20200816162958788.png" alt="image-20200816162958788" style="zoom: 50%;" />
 
 ###### 2）本地版本控制
 
-<img src="../src/main/resources/picture/image-20200816163315500.png" alt="image-20200816163315500" style="zoom:50%;" />
+<img src="pic/image-20200816163315500.png" alt="image-20200816163315500" style="zoom:50%;" />
 
 1. 机制：通过数据库记录文件历次更新的差异，差异以补丁的形式记录对应文件修订前后的内容变化。
 2. 不足：不支持多开发者协同工作。
@@ -26,7 +26,7 @@
 
 ###### 3）集中版本控制
 
-<img src="../src/main/resources/picture/image-20200816163352003.png" alt="image-20200816163352003" style="zoom:50%;" />
+<img src="pic/image-20200816163352003.png" alt="image-20200816163352003" style="zoom:50%;" />
 
 1. 机制：单一的集中管理的服务器保存所有文件的修订版本，协同工作的人们通过客户端连到该服务器，取出最新的文件或提交更新
 2. 不足：中央服务器的单点故障可能导致数据丢失。
@@ -34,7 +34,7 @@
 
 ###### 4）分布式版本控制
 
-<img src="../src/main/resources/picture/image-20200816163416123.png" alt="image-20200816163416123" style="zoom:50%;" />
+<img src="pic/image-20200816163416123.png" alt="image-20200816163416123" style="zoom:50%;" />
 
 1. 机制：每个客户端都拥有独立且完整的版本仓库，且客户端地位相等（类似P2P网络），它们之间可相互获取、推送更新。
 2. 优点：1）消除集中版本控制系统的单点故障；2）协作开发时，允许单个客户端在本地版本仓库独立提交更新，并在合适时推送给其他客户端或某个约定为中央仓库的客户端。
@@ -47,9 +47,9 @@
 1. Git关心文件整体内容的变化，而大多数其他系统则关心文件内容的差异（svn基于增量）。
 2. 此特性为多分支并行开发提供了支持。
 
-<img src="../src/main/resources/picture/image-20200816164228680.png" alt="image-20200816164228680" style="zoom:50%;" />
+<img src="pic/image-20200816164228680.png" alt="image-20200816164228680" style="zoom:50%;" />
 
-<img src="../src/main/resources/picture/image-20200816164243328.png" alt="image-20200816164243328" style="zoom:50%;" />
+<img src="pic/image-20200816164243328.png" alt="image-20200816164243328" style="zoom:50%;" />
 
 ###### 2）几乎所有操作都是本地操作
 1. 速度快
@@ -91,7 +91,7 @@
 
 - refs/：目录存储指向数据的commit对象的指针
 
-  <img src="../src/main/resources/picture/image-20200816170449543.png" alt="image-20200816170449543" style="zoom:50%;" />
+  <img src="pic/image-20200816170449543.png" alt="image-20200816170449543" style="zoom:50%;" />
 
 - HEAD：文件内容为当前分支
 
@@ -103,7 +103,7 @@ ref: refs/heads/dev
 
 ##### 4. 工作区，暂存区和仓库的概念
 
-<img src="../src/main/resources/picture/image-20200816164801158.png" alt="image-20200816164801158" style="zoom:50%;" />
+<img src="pic/image-20200816164801158.png" alt="image-20200816164801158" style="zoom:50%;" />
 
 ##### 5. 高级命令和低级命令
 
@@ -114,11 +114,11 @@ ref: refs/heads/dev
 
 
 
-<img src="../src/main/resources/picture/image-20200816165839239.png" alt="image-20200816165839239" style="zoom:50%;" />
+<img src="pic/image-20200816165839239.png" alt="image-20200816165839239" style="zoom:50%;" />
 
-<img src="../src/main/resources/picture/image-20200816171309450.png" alt="image-20200816171309450" style="zoom:50%;" />
+<img src="pic/image-20200816171309450.png" alt="image-20200816171309450" style="zoom:50%;" />
 
-<img src="../src/main/resources/picture/image-20200816173027595.png" alt="image-20200816173027595" style="zoom:50%;" />
+<img src="pic/image-20200816173027595.png" alt="image-20200816173027595" style="zoom:50%;" />
 
 ```git
 vim .git/refs/heads/dev
@@ -127,9 +127,9 @@ vim .git/refs/heads/dev
 b8942bbf8ff41d8670611a7c256e5663d973e28b
 ```
 
-<img src="../src/main/resources/picture/image-20200816165934857.png" alt="image-20200816165934857" style="zoom:50%;" />
+<img src="pic/image-20200816165934857.png" alt="image-20200816165934857" style="zoom:50%;" />
 
-<img src="../src/main/resources/picture/image-20200816170909518.png" alt="image-20200816170909518" style="zoom:50%;" />
+<img src="pic/image-20200816170909518.png" alt="image-20200816170909518" style="zoom:50%;" />
 
 ##### 7. 基于内容存储和Hash碰撞
 
@@ -164,7 +164,7 @@ public class GitBlobSha1Util {
 
 2）冲突场景
 
-<img src="../src/main/resources/picture/image-20200816172404502.png" alt="image-20200816172404502" style="zoom:50%;" />
+<img src="pic/image-20200816172404502.png" alt="image-20200816172404502" style="zoom:50%;" />
 
 3）解决方式
 
@@ -173,9 +173,9 @@ public class GitBlobSha1Util {
 
 ##### 8.三路合并（**3-way merge**）
 
-<img src="../src/main/resources/picture/image-20200817221051604.png" alt="image-20200817221051604" style="zoom:50%;" />
+<img src="pic/image-20200817221051604.png" alt="image-20200817221051604" style="zoom:50%;" />
 
-<img src="../src/main/resources/picture/image-20200818012810354.png" alt="image-20200818012810354" style="zoom:50%;" />
+<img src="pic/image-20200818012810354.png" alt="image-20200818012810354" style="zoom:50%;" />
 
 ##### 9. Merge策略概览
 
@@ -185,7 +185,7 @@ public class GitBlobSha1Util {
 
 当有多个共同祖先可用于三向合并时，它会创建一个共同祖先的合并树，并将其用作三向合并的参考树。
 
-<img src="../src/main/resources/picture/image-20200817222355125.png" alt="image-20200817222355125" style="zoom:50%;" />
+<img src="pic/image-20200817222355125.png" alt="image-20200817222355125" style="zoom:50%;" />
 
 3）**octopus**：用于合并多个分支；
 
@@ -205,7 +205,7 @@ public class GitBlobSha1Util {
 
 * 对角线走一步：无需编辑
 
-<img src="../src/main/resources/picture/image-20200816175042823.png" alt="image-20200816175042823" style="zoom:50%;" />
+<img src="pic/image-20200816175042823.png" alt="image-20200816175042823" style="zoom:50%;" />
 
 1. 初始状态：abcabba
 2. x轴2步：cabba
@@ -224,9 +224,9 @@ public class GitBlobSha1Util {
 
 2）多平台认证更方便：git.jd.com,coding.jd.com,github.com
 
-<img src="../src/main/resources/picture/image-20200817225523352.png" alt="image-20200817225523352" style="zoom:50%;" />
+<img src="pic/image-20200817225523352.png" alt="image-20200817225523352" style="zoom:50%;" />
 
-<img src="../src/main/resources/picture/image-20200817225555159.png" alt="image-20200817225555159" style="zoom:50%;" />
+<img src="pic/image-20200817225555159.png" alt="image-20200817225555159" style="zoom:50%;" />
 
 ##### 12. 配置sparse checkout
 
@@ -256,19 +256,19 @@ git branch
 git fiter-branch
 ```
 
-<img src="../src/main/resources/picture/image-20200818195656363.png" alt="image-20200818195656363" style="zoom: 80%;" />
+<img src="pic/image-20200818195656363.png" alt="image-20200818195656363" style="zoom: 80%;" />
 
-![img](../src/main/resources/picture/u=3924317433,576360879&fm=26&gp=0.jpg)
+![img](pic/u=3924317433,576360879&fm=26&gp=0.jpg)
 
-<img src="../src/main/resources/picture/image-20200818224909027.png" alt="image-20200818224909027" style="zoom:50%;" />
+<img src="pic/image-20200818224909027.png" alt="image-20200818224909027" style="zoom:50%;" />
 
 ##### 2. 特殊符号
 
 1）引用符号
 
-<img src="../src/main/resources/picture/image-20200816173225787.png" alt="image-20200816173225787" style="zoom:50%;" />
+<img src="pic/image-20200816173225787.png" alt="image-20200816173225787" style="zoom:50%;" />
 
-<img src="../src/main/resources/picture/image-20200816173201169.png" alt="image-20200816173201169" style="zoom:50%;" />
+<img src="pic/image-20200816173201169.png" alt="image-20200816173201169" style="zoom:50%;" />
 
 2）提交范围
 
@@ -335,7 +335,7 @@ git push
 </detail body>
 ```
 
-![image-20200817155327129](../src/main/resources/picture/image-20200817155327129.png)
+![image-20200817155327129](pic/image-20200817155327129.png)
 
 ##### 3. 提交粒度
 
@@ -350,9 +350,9 @@ git pull = git fetch + git merge
 git pull --rebase = git fetch + git rebase
 ```
 
-<img src="../src/main/resources/picture/image-20200817225002626.png" alt="image-20200817225002626" style="zoom:50%;" />
+<img src="pic/image-20200817225002626.png" alt="image-20200817225002626" style="zoom:50%;" />
 
-<img src="../src/main/resources/picture/image-20200817225025973.png" alt="image-20200817225025973" style="zoom:50%;" />
+<img src="pic/image-20200817225025973.png" alt="image-20200817225025973" style="zoom:50%;" />
 
 优劣：
 
@@ -373,7 +373,7 @@ wangqiwei -- 本地分支/临时分支
 
 如以下情况会出现非预期结果
 
-![image-20211021180444036](../src/main/resources/picture/image-20211021180444036.png)
+![image-20211021180444036](pic/image-20211021180444036.png)
 
 #### 四、 Git工作流
 
@@ -392,7 +392,7 @@ wangqiwei -- 本地分支/临时分支
 * 如果仅仅依靠`tag`不能满足要求，则从主干分支创建发布分支。
 * `bug`修复在主干分支进行，再`cherry-pick`到发布分支
 
-![image-20200818223844817](../src/main/resources/picture/image-20200818223844817.png)
+![image-20200818223844817](pic/image-20200818223844817.png)
 
 ##### 2. [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/)
 
@@ -434,9 +434,9 @@ wangqiwei -- 本地分支/临时分支
       * (devlop)：git merge --no-ff，体现出特性（当release分支存在时优先合并进release分支，由release分支合并进develop）
     * 迁出分支后，首先修改为新版本号；
 
-    ![image-20200818224410127](../src/main/resources/picture/image-20200818224410127.png)
+    ![image-20200818224410127](pic/image-20200818224410127.png)
 
-<img src="../src/main/resources/picture/git-model@2x.png" alt="img" style="zoom: 67%;" />
+<img src="pic/git-model@2x.png" alt="img" style="zoom: 67%;" />
 
 ##### 3. GitHub Flow
 
@@ -450,7 +450,7 @@ wangqiwei -- 本地分支/临时分支
 * 当需要进行任何修改时，总是从`master`分支创建新分支。完成之后通过`pull request`和相关的代码审查来合并回`master`分支
 * hotfix, feature分支都遵循上面的准则；
 
-![image-20200818223940393](../src/main/resources/picture/image-20200818223940393.png)
+![image-20200818223940393](pic/image-20200818223940393.png)
 
 
 
@@ -458,7 +458,7 @@ wangqiwei -- 本地分支/临时分支
 
 来源：https://mp.weixin.qq.com/s/9Ey04P5Xv4W95N2FEioZ1g
 
-![来源https://mp.weixin.qq.com/s/9Ey04P5Xv4W95N2FEioZ1g](../src/main/resources/picture/image-20200818224114950.png)
+![来源https://mp.weixin.qq.com/s/9Ey04P5Xv4W95N2FEioZ1g](pic/image-20200818224114950.png)
 
 
 
