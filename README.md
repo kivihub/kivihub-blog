@@ -22,7 +22,7 @@ cp hooks/pre-commit .git/hooks/
 - [Git分享 (3,279字)](shared/Git分享.md)
 
 ---
-#### 博客目录(264篇/221,365字)
+#### 博客目录(264篇/225,971字)
 - [1.TroubleShooting (43篇)](blog/1.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/1.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/1.TroubleShooting/1.观察日志)
@@ -319,8 +319,8 @@ cp hooks/pre-commit .git/hooks/
     - [5.架构治理 (4,501字)](blog/16.工作那些事/5.架构治理.md)
     - [6.一般的分析问题 (2,846字)](blog/16.工作那些事/6.一般的分析问题.md)
     - [7.小数决策和审查数据 (2,287字)](blog/16.工作那些事/7.小数决策和审查数据.md)
-    - [8.三省吾身 (1,759字)](blog/16.工作那些事/8.三省吾身.md)
-    - [9.书籍 (438字)](blog/16.工作那些事/9.书籍.md)
+    - [8.三省吾身 (1,790字)](blog/16.工作那些事/8.三省吾身.md)
+    - [9.书籍 (5,013字)](blog/16.工作那些事/9.书籍.md)
 
 ---
 *...我也是有底线的...*
