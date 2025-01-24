@@ -1,0 +1,15 @@
+widgets:
+  -
+    position: left
+    type: profile
+    author: kivi
+    location: Beijing
+    avatar: /about/avatar.jpg
+    avatar_rounded: false
+    follow_link: https://github.com/kivihub
+  -
+    position: left
+    type: toc
+    index: false
+    collapsed: false
+    depth: 3
