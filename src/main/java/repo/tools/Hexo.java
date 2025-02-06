@@ -8,8 +8,15 @@ import repo.tools.internal.HexoTitle;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import static repo.tools.internal.HexoTitle.htmlPattern;
+import static repo.tools.internal.HexoTitle.mdPattern;
 
 public class Hexo {
     public static File repoDir = new File(System.getProperty("user.dir"));
@@ -67,19 +74,37 @@ public class Hexo {
                 tarFile.renameTo(new File(postDir, newFileName));
                 tarFile = new File(postDir, newFileName);
 
-                // 移动图片
+                // 移动使用到的图片
+                List<String> pics = getUsedPic(FileUtils.readFileToString(tarFile));
                 File srcPicDir = new File(srcfile.getParentFile(), "pic");
-                if (srcPicDir.exists() && !pic.contains(srcPicDir.getPath())) {
-                    FileUtils.copyDirectoryToDirectory(srcPicDir, this.sourceDir);
-                    pic.add(srcPicDir.getPath());
+                for (String pic : pics) {
+                    File srcPic = new File(srcPicDir, pic);
+                    if (srcPic.exists()) {
+                        File postPicDir = new File(postDir, tarFile.getName().replace(".md", "") + "/pic");
+                        FileUtils.copyFileToDirectory(srcPic, postPicDir);
+                    }
                 }
 
                 // 修改Markdown，适配hexo
-                HexoTitle title = new HexoTitle(srcfile, tarFile, moreAfterLine);
+                HexoTitle title = new HexoTitle(this, srcfile, tarFile, moreAfterLine);
                 title.FillTitle().FillDate().FillCate().FillCover().Done();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+        }
+
+        private List<String> getUsedPic(String content) {
+            List<String> pics = new ArrayList<>();
+            Matcher matcher = htmlPattern.matcher(content);
+            while (matcher.find()) {
+                pics.add(matcher.group(1));
+            }
+
+            matcher = mdPattern.matcher(content);
+            while (matcher.find()) {
+                pics.add(matcher.group(1));
+            }
+            return pics;
         }
 
         public String removeIndexPrefix(String name) {

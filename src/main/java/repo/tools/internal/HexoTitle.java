@@ -2,6 +2,7 @@ package repo.tools.internal;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import repo.tools.Hexo;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,16 +14,20 @@ import static repo.tools.Hexo.blogDir;
 import static repo.tools.Hexo.repoDir;
 
 public class HexoTitle {
+    public static Pattern htmlPattern = Pattern.compile("src=\"/?pic/([^\"]+)");
+    public static Pattern mdPattern = Pattern.compile("!\\[[^]]+]\\(pic/([^)]+)\\)");
+    Hexo.Post post;
     File srcFile;
     File tarFile;
     String title;
     int moreAfterLine;
 
-    public HexoTitle(File srcFile, File tarFile, int moreAfterLine) throws IOException {
+    public HexoTitle(Hexo.Post post, File srcFile, File tarFile, int moreAfterLine) throws IOException {
         this.srcFile = srcFile;
         this.tarFile = tarFile;
         this.moreAfterLine = moreAfterLine;
-        this.title = FileUtils.readFileToString(new File(repoDir, "src/main/resources/hexo/title.yaml"));
+        this.title = FileUtils.readFileToString(new File(repoDir, "src/main/resources/hexo/title.yml"));
+        this.post = post;
     }
 
     public HexoTitle FillTitle() {
@@ -44,26 +49,32 @@ public class HexoTitle {
         return this;
     }
 
+    // 封面图片
     public HexoTitle FillCover() throws IOException {
         String content = FileUtils.readFileToString(tarFile);
         String imagePath = "";
 
-        Pattern pattern = Pattern.compile("src=\"/?pic/([^\"]+)");
-        Matcher matcher = pattern.matcher(content);
+        // Step1: 获取文中第一个图片
+        Matcher matcher = htmlPattern.matcher(content);
         if (matcher.find()) {
-            imagePath = "/pic/" + matcher.group(1);
-            System.out.println("首个图片路径是: " + imagePath);
+            imagePath = matcher.group(1);
         } else {
-            pattern = Pattern.compile("!\\[[^]]+]\\(pic/([^)]+)\\)");
-            matcher = pattern.matcher(content);
+            matcher = mdPattern.matcher(content);
             if (matcher.find()) {
-                imagePath = "/pic/" + matcher.group(1);
-                System.out.println("首个图片路径是: " + imagePath);
+                imagePath = matcher.group(1);
             }
         }
 
+        // Step2: 设置封面字段
+        if (imagePath.isEmpty()) {
+            title = title.replace("{firstPic}", "");
+        } else {
+            String thumbnailDir = String.format("/thumbnail/%s", tarFile.getName().replace(".md", ""));
+            FileUtils.copyFileToDirectory(new File(tarFile.getAbsolutePath().replace(".md", "") + "/pic/" + imagePath), new File(post.sourceDir, thumbnailDir));
 
-        title = title.replace("{firstPic}", imagePath);
+            String thumbnailPic = String.format("%s/%s", thumbnailDir, imagePath);
+            title = title.replace("{firstPic}", thumbnailPic);
+        }
         return this;
     }
 
@@ -83,7 +94,7 @@ public class HexoTitle {
                 if (lines.get(i).startsWith("```")) {
                     inCodeBlock = !inCodeBlock;
                 }
-                if (!inCodeBlock && i+1 >= moreAfterLine && !append) {
+                if (!inCodeBlock && i + 1 >= moreAfterLine && !append) {
                     sb.append("<!-- more -->\n");
                     append = true;
                 }
@@ -92,7 +103,7 @@ public class HexoTitle {
         }
 
         // Step2: fix picture path
-        content = content.replace("src=\"pic/", "src=\"/pic/");
+//        content = content.replace("src=\"pic/", "src=\"/pic/");
 
         FileUtils.writeStringToFile(tarFile, title + "\n" + content);
     }
