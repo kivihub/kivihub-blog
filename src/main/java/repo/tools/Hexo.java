@@ -13,7 +13,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import static repo.tools.internal.HexoTitle.htmlPattern;
 import static repo.tools.internal.HexoTitle.mdPattern;
@@ -27,9 +26,10 @@ public class Hexo {
         Post post = new Post(repoDir);
         post.Clear();
         FileUtils.listFiles(repoDir, new PostFilter(), TrueFileFilter.INSTANCE).forEach(post::AddPost);
-        post.Generate();
-        post.Server();
-//        post.Deploy();
+        // 以下三个命令相互独立
+//        post.Generate();
+//        post.Server();
+        post.Deploy();
     }
 
     public static class PostFilter implements IOFileFilter {
@@ -48,12 +48,14 @@ public class Hexo {
         public File hexoDir;
         public File postDir;
         public File sourceDir;
+        public File deployRoot;
         public Set<String> pic = new HashSet<>();
 
         public Post(File repoDir) {
             hexoDir = new File(repoDir.getParentFile(), "hexo");
             postDir = new File(hexoDir, "source/_posts");
             sourceDir = new File(hexoDir, "source");
+            deployRoot = new File(repoDir.getParentFile(), "hexo");
         }
 
         public void Clear() throws IOException {
@@ -117,7 +119,7 @@ public class Hexo {
         }
 
         public void Server() {
-            Cmd.Run(String.format("cd %s; hexo server;", postDir.getAbsolutePath()));
+            Cmd.Run(String.format("cd %s; hexo server -l;", postDir.getAbsolutePath()));
         }
 
         public void Deploy() {

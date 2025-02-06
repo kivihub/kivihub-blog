@@ -11,5 +11,5 @@ widgets:
     position: left
     type: toc
     index: false
-    collapsed: false
+    collapsed: true
     depth: 3

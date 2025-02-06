@@ -7,9 +7,10 @@ head:
     type: blog
 navbar:
   menu:
-    首页: /archives
+    首页: /
+    归档: /archives
     分类: /categories
-    关于: /about
+    留言板: /about
   links:
     GitHub:
       icon: fab fa-github
@@ -32,7 +33,7 @@ search:
   index_pages: true
 sidebar:
   left:
-    sticky: false
+    sticky: true
   right:
     sticky: false
 # https://ppoffice.github.io/hexo-theme-icarus/Widgets/icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97-%E6%8C%82%E4%BB%B6/
@@ -46,9 +47,8 @@ widgets:
     follow_link: https://github.com/kivihub
   - position: left
     type: categories
-  #    -
-  #        position: right
-  #        type: recent_posts
+  - position: right
+    type: recent_posts
   - position: right
     type: archives
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
