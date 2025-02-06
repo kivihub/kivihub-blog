@@ -22,7 +22,7 @@ cp hooks/pre-commit .git/hooks/
 - [Git分享 (3,279字)](shared/Git分享.md)
 
 ---
-#### 博客目录(264篇/231,371字)
+#### 博客目录(264篇/231,373字)
 - [1.TroubleShooting (43篇)](blog/1.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/1.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/1.TroubleShooting/1.观察日志)
@@ -214,7 +214,7 @@ cp hooks/pre-commit .git/hooks/
     - [19.git工作流 (606字)](blog/5.Git/19.git工作流.md)
     - [20.sparse_checkout (87字)](blog/5.Git/20.sparse_checkout.md)
     - [21.git提交规范 (195字)](blog/5.Git/21.git提交规范.md)
-    - [22.常见问题 (1,141字)](blog/5.Git/22.常见问题.md)
+    - [22.常见问题 (1,143字)](blog/5.Git/22.常见问题.md)
     - [23.git分析工具 (56字)](blog/5.Git/23.git分析工具.md)
     - [24.合并两个仓库 (547字)](blog/5.Git/24.合并两个仓库.md)
 - [6.Linux (8篇)](blog/6.Linux)
@@ -319,7 +319,7 @@ cp hooks/pre-commit .git/hooks/
     - [5.架构治理 (6,864字)](blog/16.工作/5.架构治理.md)
     - [6.一般的分析问题 (2,842字)](blog/16.工作/6.一般的分析问题.md)
     - [7.小数决策和审查数据 (4,862字)](blog/16.工作/7.小数决策和审查数据.md)
-    - [8.三省吾身 (1,786字)](blog/16.工作/8.三省吾身.md)
+    - [8.复盘 (1,786字)](blog/16.工作/8.复盘.md)
     - [9.书籍 (5,492字)](blog/16.工作/9.书籍.md)
 
 ---
