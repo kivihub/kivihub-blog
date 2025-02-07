@@ -26,10 +26,10 @@ public class Hexo {
         Post post = new Post(repoDir);
         post.Clear();
         FileUtils.listFiles(repoDir, new PostFilter(), TrueFileFilter.INSTANCE).forEach(post::AddPost);
-        // 以下三个命令相互独立
-//        post.Generate();
-//        post.Server();
-        post.Deploy();
+        post.Generate();
+        post.PostProcess();
+        post.Server();
+//        post.Deploy();
     }
 
     public static class PostFilter implements IOFileFilter {
@@ -118,12 +118,26 @@ public class Hexo {
             Cmd.Run(String.format("cd %s; hexo generate;", hexoDir.getAbsolutePath()));
         }
 
+        /**
+         * 1. hexo server -s不生效，需要写完整--static</br>
+         * 2. hexo server如果不加参数--static，就会直接在内存重新生成html（不落盘）
+         */
         public void Server() {
-            Cmd.Run(String.format("cd %s; hexo server -l;", postDir.getAbsolutePath()));
+            Cmd.Run(String.format("cd %s; hexo server --static;", hexoDir.getAbsolutePath()));
         }
 
         public void Deploy() {
+            // --setup ?
             Cmd.Run(String.format("cd %s; hexo deploy;", hexoDir.getAbsolutePath()));
+        }
+
+        public void PostProcess() throws IOException {
+            // Step1: 使用archives/index.html代替首页的index.html
+            File publicDir = new File(deployRoot, "public");
+            File originIndex = new File(publicDir, "index.html");
+            originIndex.renameTo(new File(publicDir, "index_post.html"));
+            File archiveIndex = new File(publicDir, "archives/index.html");
+            FileUtils.copyFileToDirectory(archiveIndex, publicDir);
         }
     }
 }

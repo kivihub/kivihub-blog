@@ -8,7 +8,6 @@ head:
 navbar:
   menu:
     首页: /
-    归档: /archives
     分类: /categories
     留言板: /about
   links:
@@ -25,7 +24,7 @@ article:
   highlight:
     theme: atom-one-light
     clipboard: true
-    fold:
+    fold: "unfolded"
   readtime: true
   update_time: false
 search:
@@ -47,8 +46,8 @@ widgets:
     follow_link: https://github.com/kivihub
   - position: left
     type: categories
-  - position: right
-    type: recent_posts
+#  - position: right
+#    type: recent_posts
   - position: right
     type: archives
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
