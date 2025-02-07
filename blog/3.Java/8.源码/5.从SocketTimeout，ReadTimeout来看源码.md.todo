@@ -1,0 +1,8 @@
+#### 前置问题
+
+1. socketTimeout和readTimeout有区别吗？
+2. 这两个timeout发生的时机是什么？
+3. socket和Tcp的关系？socket的哪些api对应三次握手和四次挥手？
+4. socket最终调用了C语言的哪个方法？在Linux里是如何实现的？
+5. 什么情况下会导致这两种timeout？网络抖动会引发这两种timeout吗？
+6. 网卡在tcp传输中扮演了什么角色？
