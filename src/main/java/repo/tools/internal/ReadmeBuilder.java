@@ -37,8 +37,6 @@ public class ReadmeBuilder {
         StringBuilder sb = new StringBuilder();
         appendSection(sb, new File(readmeFile, "../src/main/resources/readme/head.md"));
         sb.append("\n---\n");
-        appendTocBlog(sb, new File(readmeFile, "../shared"), "#### 总结分享");
-        sb.append("\n---\n");
         appendTocBlog(sb, new File(readmeFile, "../blog"), "#### 博客目录");
         sb.append("\n---\n");
         appendSection(sb, new File(readmeFile, "../src/main/resources/readme/tail.md"));

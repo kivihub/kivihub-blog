@@ -1,28 +1,31 @@
 ## kivihub-blog#一个私人博客仓库
 
->  非学无以广才，非志无以成学。     —— 诫子书
+> 非学无以广才，非志无以成学。 —— 诫子书
 
 #### GIT钩子配置
+
 使用pre-commit钩子，每次提交前会自动更新README.md
+
 ```shell
 cp hooks/pre-commit .git/hooks/
 ```
+
+更新生成逻辑：
+```shell
+mvn clean package
+cp target/pre-commit.jar hooks/
+```
+
 #### 仓库目录
 
-| 目录                          | 分类           | 介绍                                        |
-| ----------------------------- | -------------- | ------------------------------------------- |
-| */shared*                     | **总结分享**   | 汇总性文章，对某个知识的全局性总结          |
-| */blog*                       | **博客目录**   | 较零散知识，偏某个知识细节                  |
-| */reference*                  | **引用目录**   | 博客中引用的文章存放目录                    |
-| */src/main/resources/picture* | **图片目录**   | 文章引用图片存放目录                        |
-| */src/main/java/repo/tools*   | **仓库工具**   | 自动生成README.md                           |
-| */src/main/resources/readme*  | **README片段** | 用于生成README.md的片段，如head.md，tail.md |
+| 目录                           | 分类           | 介绍                                |
+|------------------------------|--------------|-----------------------------------|
+| */blog*                      | **博客目录**     | 较零散知识，偏某个知识细节                     |
+| */reference*                 | **引用目录**     | 博客中引用的文章存放目录                      |
+| */src/main/java/repo/tools*  | **仓库工具**     | 自动生成README.md                     |
+| */src/main/resources/readme* | **README片段** | 用于生成README.md的片段，如head.md，tail.md |
 ---
-#### 总结分享(1篇/3,279字)
-- [Git分享 (3,279字)](shared/Git分享.md)
-
----
-#### 博客目录(264篇/231,373字)
+#### 博客目录(265篇/234,652字)
 - [1.TroubleShooting (43篇)](blog/1.TroubleShooting)
     - [0.TroubleShooting方法论 (1,229字)](blog/1.TroubleShooting/0.TroubleShooting方法论.md)
     - [1.观察日志 (16篇)](blog/1.TroubleShooting/1.观察日志)
@@ -70,7 +73,7 @@ cp hooks/pre-commit .git/hooks/
         - [17.内存飚高排查（四） (214字)](blog/1.TroubleShooting/4.流程分析/17.内存飚高排查（四）.md)
     - [5.单元测试 (3篇)](blog/1.TroubleShooting/5.单元测试)
         - [1.单元测试才是绩效的保命符 (425字)](blog/1.TroubleShooting/5.单元测试/1.单元测试才是绩效的保命符.md)
-        - [2.numVar=2，但${numVar除1000}为什么是0？ (321字)](blog/1.TroubleShooting/5.单元测试/2.numVar=2，但${numVar除1000}为什么是0？.md)
+        - [2.el表达式与BigDecimal (321字)](blog/1.TroubleShooting/5.单元测试/2.el表达式与BigDecimal.md)
         - [3.因浮点精度损失了1分钱 (2,544字)](blog/1.TroubleShooting/5.单元测试/3.因浮点精度损失了1分钱.md)
 - [2.Golang (4篇)](blog/2.Golang)
     - [0.环境准备 (24字)](blog/2.Golang/0.环境准备.md)
@@ -191,7 +194,8 @@ cp hooks/pre-commit .git/hooks/
     - [13.JDBC的时区调停 (459字)](blog/4.Mysql/13.JDBC的时区调停.md)
     - [14.分库分表 (517字)](blog/4.Mysql/14.分库分表.md)
     - [15.Mysql如何保证数据不丢失 (789字)](blog/4.Mysql/15.Mysql如何保证数据不丢失.md)
-- [5.Git (25篇)](blog/5.Git)
+- [5.Git (26篇)](blog/5.Git)
+    - [0.Git分享 (3,279字)](blog/5.Git/0.Git分享.md)
     - [0.序言 (150字)](blog/5.Git/0.序言.md)
     - [1.VCS简介 (1,556字)](blog/5.Git/1.VCS简介.md)
     - [2.Git内部原理 (2,361字)](blog/5.Git/2.Git内部原理.md)
@@ -202,7 +206,7 @@ cp hooks/pre-commit .git/hooks/
     - [7.Git远程仓库 (230字)](blog/5.Git/7.Git远程仓库.md)
     - [8.Git标签和分支 (3,304字)](blog/5.Git/8.Git标签和分支.md)
     - [9.Git补充内容 (1,432字)](blog/5.Git/9.Git补充内容.md)
-    - [10..gitindex文件 (1,752字)](blog/5.Git/10..gitindex文件.md)
+    - [10.gitindex文件 (1,752字)](blog/5.Git/10.gitindex文件.md)
     - [11.gitconfig文件详解 (156字)](blog/5.Git/11.gitconfig文件详解.md)
     - [12.查看谁修改了我的文件 (217字)](blog/5.Git/12.查看谁修改了我的文件.md)
     - [13.git_log_--follow (159字)](blog/5.Git/13.git_log_--follow.md)
