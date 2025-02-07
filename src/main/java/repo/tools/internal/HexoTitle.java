@@ -4,8 +4,10 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import repo.tools.Hexo;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -36,8 +38,22 @@ public class HexoTitle {
     }
 
     public HexoTitle FillDate() {
-        String createAt = Cmd.Run(String.format("cd %s; git log --format='%%ai' --follow -- '%s' | tail -1;", repoDir.getAbsolutePath(), srcFile.getAbsolutePath()));
-        title = title.replace("{date}", StringUtils.trim(createAt));
+        String create = "";
+        try (BufferedReader reader = Files.newBufferedReader(tarFile.toPath())) {
+            Pattern pattern = Pattern.compile("<!--\\s*date:\\s*([\\d\\. :]+)\\s*-->");
+            Matcher matcher = pattern.matcher(reader.readLine());
+            if (matcher.find()) {
+                create = matcher.group(1);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        if (create.isEmpty()) {
+            create = Cmd.Run(String.format("cd %s; git log --format='%%ai' --follow -- '%s' | tail -1;", repoDir.getAbsolutePath(), srcFile.getAbsolutePath()));
+        }
+
+        title = title.replace("{date}", StringUtils.trim(create));
         return this;
     }
 

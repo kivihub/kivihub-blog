@@ -16,6 +16,20 @@ mvn clean package
 cp target/pre-commit.jar hooks/
 ```
 
+#### Hexo首次初始化
+```bash
+cd hexo/
+
+brew install node
+
+# 可选，npm install卡顿时设置
+npm config set registry https://registry.npm.taobao.org
+npm config set strict-ssl false
+
+npm install -g hexo-cli
+npm install
+```
+
 #### 仓库目录
 
 | 目录                           | 分类           | 介绍                                |
