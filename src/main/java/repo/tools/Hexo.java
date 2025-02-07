@@ -13,6 +13,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static repo.tools.internal.HexoTitle.htmlPattern;
 import static repo.tools.internal.HexoTitle.mdPattern;
@@ -76,6 +77,13 @@ public class Hexo {
                 tarFile.renameTo(new File(postDir, newFileName));
                 tarFile = new File(postDir, newFileName);
 
+                // 处理图片格式：html → markdown。
+                // 因为html的<img>中的路径在渲染为html时，不会修改其path，导致图片无法正常显示。
+                // 详见：https://hexo.io/zh-cn/docs/asset-folders#%E4%BD%BF%E7%94%A8-Markdown-%E5%B5%8C%E5%85%A5%E5%9B%BE%E7%89%87
+                String content = FileUtils.readFileToString(tarFile);
+                content = replaceImageTags(content);
+                FileUtils.writeStringToFile(tarFile, content);
+
                 // 移动使用到的图片
                 List<String> pics = getUsedPic(FileUtils.readFileToString(tarFile));
                 File srcPicDir = new File(srcfile.getParentFile(), "pic");
@@ -93,6 +101,25 @@ public class Hexo {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+        }
+
+        private String replaceImageTags(String content) {
+            String imgTagRegex = "<img[^>]*src=\"([^\"]*)\"[^>]*alt=\"([^\"]*)\"[^>]*>";
+            Pattern pattern = Pattern.compile(imgTagRegex);
+            Matcher matcher = pattern.matcher(content);
+
+            StringBuffer sb = new StringBuffer();
+            while (matcher.find()) {
+                String imagePath = matcher.group(1);
+                if (!imagePath.startsWith("pic/")) {
+                    continue;
+                }
+                String imageName = matcher.group(2);
+                String replacement = String.format("![%s](%s)", imageName, imagePath);
+                matcher.appendReplacement(sb, replacement);
+            }
+            matcher.appendTail(sb);
+            return sb.toString();
         }
 
         private List<String> getUsedPic(String content) {
@@ -139,6 +166,7 @@ public class Hexo {
             File archiveIndex = new File(publicDir, "archives/index.html");
             FileUtils.copyFileToDirectory(archiveIndex, publicDir);
         }
+
     }
 }
 
