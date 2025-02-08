@@ -1,6 +1,6 @@
 package repo.tools;
 
-import repo.tools.internal.ReadmeBuilder;
+import repo.tools.internal.readme.ReadmeBuilder;
 
 import java.io.File;
 import java.io.IOException;

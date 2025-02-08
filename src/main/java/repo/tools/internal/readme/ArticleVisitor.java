@@ -1,4 +1,4 @@
-package repo.tools.internal;
+package repo.tools.internal.readme;
 
 import org.apache.commons.io.comparator.NameFileComparator;
 import org.apache.commons.io.filefilter.TrueFileFilter;
@@ -16,23 +16,24 @@ import java.util.function.Function;
  * @date 2021/12/16 23:12
  */
 public class ArticleVisitor {
+    private final StringBuilder toc = new StringBuilder();
     private String indentation = "\t";
     private Comparator<File> comparator = new NameFileComparator();
-    private Function<File, String> articleDisplayFormatter = s -> s.getName();
-    private Function<File, String> dirDisplayFormatter = s -> s.getName();
+    private Function<File, String> articleDisplayFormatter = File::getName;
+    private Function<File, String> dirDisplayFormatter = File::getName;
     private FileFilter fileFilter = TrueFileFilter.INSTANCE;
-    private StringBuilder toc = new StringBuilder();
 
-    public void visit(File dir) {
+    public String getToc() {
+        return toc.toString();
+    }
+
+    public ArticleVisitor visit(File dir) {
         try {
             doVisit(dir, -1);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    public String getToc() {
-        return toc.toString();
+        return this;
     }
 
     private void doVisit(File file, int depth) throws IOException {
@@ -43,6 +44,7 @@ public class ArticleVisitor {
             String dirDisplay = dirDisplayFormatter.apply(file);
             if (depth != -1) appendToToc(dirDisplay, depth);
             File[] childFiles = file.getCanonicalFile().listFiles(fileFilter);
+            assert childFiles != null;
             Arrays.sort(childFiles, comparator);
             for (File child : childFiles) {
                 doVisit(child, depth + 1);
@@ -52,7 +54,7 @@ public class ArticleVisitor {
 
     private void appendToToc(String displayName, int depth) {
         String indentation = StringUtils.repeat(this.indentation, depth);
-        toc.append(indentation + displayName + "\n");
+        toc.append(indentation).append(displayName).append("\n");
     }
 
     public ArticleVisitor setFileFilter(FileFilter fileFilter) {
