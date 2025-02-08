@@ -159,12 +159,34 @@ public class Hexo {
         }
 
         public void PostProcess() throws IOException {
-            // Step1: 使用archives/index.html代替首页的index.html
             File publicDir = new File(deployRoot, "public");
+
+            // Step1: 使用archives/index.html代替首页的index.html
             File originIndex = new File(publicDir, "index.html");
             originIndex.renameTo(new File(publicDir, "index_post.html"));
             File archiveIndex = new File(publicDir, "archives/index.html");
             FileUtils.copyFileToDirectory(archiveIndex, publicDir);
+
+            // Step2: reset html title
+            FileUtils.listFiles(publicDir, new IOFileFilter() {
+                @Override
+                public boolean accept(File file) {
+                    return file.getName().endsWith(".html");
+                }
+
+                @Override
+                public boolean accept(File file, String s) {
+                    return false;
+                }
+            }, TrueFileFilter.INSTANCE).forEach(file -> {
+                try {
+                    String content = FileUtils.readFileToString(file);
+                    content = content.replaceFirst("<title>.*</title>", "<title>Kivi's Blog</title>");
+                    FileUtils.writeStringToFile(file, content);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
         }
 
     }

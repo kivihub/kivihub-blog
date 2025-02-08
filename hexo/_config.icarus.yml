@@ -55,12 +55,6 @@ plugins:
   animejs: true
   back_to_top: true
   busuanzi: false
-  cookie_consent:
-    type: info
-    theme: edgeless
-    static: false
-    position: bottom-left
-    policyLink: https://www.cookiesandyou.com/
   gallery: true
   katex: false
   mathjax: false
