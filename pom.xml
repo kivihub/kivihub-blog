@@ -39,9 +39,13 @@
         </dependency>
     </dependencies>
     <build>
-        <sourceDirectory>src/main/java/repo/tools</sourceDirectory>
+        <sourceDirectory>src/main/java</sourceDirectory>
         <finalName>pre-commit</finalName>
         <resources>
+            <resource>
+                <directory>src/main/java/repo/tools</directory>
+                <filtering>false</filtering>
+            </resource>
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>false</filtering>
