@@ -3,15 +3,17 @@ package repo.tools;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.IOFileFilter;
 import org.apache.commons.io.filefilter.TrueFileFilter;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import repo.tools.internal.Cmd;
 import repo.tools.internal.HexoTitle;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.text.Collator;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -167,7 +169,6 @@ public class Hexo {
             File archiveIndex = new File(publicDir, "archives/index.html");
             FileUtils.copyFileToDirectory(archiveIndex, publicDir);
 
-            // Step2: reset html title
             FileUtils.listFiles(publicDir, new IOFileFilter() {
                 @Override
                 public boolean accept(File file) {
@@ -181,12 +182,46 @@ public class Hexo {
             }, TrueFileFilter.INSTANCE).forEach(file -> {
                 try {
                     String content = FileUtils.readFileToString(file);
+                    // Step2: reset html title
                     content = content.replaceFirst("<title>.*</title>", "<title>Kivi's Blog</title>");
+
+                    // Step3: sort categories
+                    content = sortCategories(content);
+
                     FileUtils.writeStringToFile(file, content);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
             });
+        }
+
+        private String sortCategories(String htmlContent) {
+            // 解析 HTML
+            Document doc = Jsoup.parse(htmlContent);
+            // 通过 "分类" 标签找到后续的 menu-list
+            Element menuLabel = doc.selectFirst("h3.menu-label:contains(分类)");
+            if (menuLabel == null) {
+                return htmlContent;
+            }
+            Element menuList = menuLabel.nextElementSibling();
+
+            // 提取元素，并将其从 DOM 移除
+            Elements sortedLinks = new Elements();
+            Elements links = menuList.select("> li");
+            for (Element link : links) {
+                sortedLinks.add(link.clone());  // 克隆节点以避免修改原始文档
+                link.remove();  // 从原始位置移除
+            }
+
+            // 按名字排序
+            Collator collator = Collator.getInstance(Locale.CHINA);
+            Collections.sort(sortedLinks, Comparator.comparing(element -> element.select(".level-item").first().text(), collator));
+
+            // 将排序后的元素插入原来的位置
+            for (Element sortedLink : sortedLinks) {
+                menuList.appendChild(sortedLink);
+            }
+            return doc.toString();
         }
 
     }
