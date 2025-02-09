@@ -28,9 +28,9 @@ public class ReadmeBuilder {
     public void buildToc() throws IOException {
         StringBuilder sb = new StringBuilder();
         appendSection(sb, new File(readmeFile, "../src/main/resources/readme/head.md"));
-        sb.append("\n---\n");
+        sb.append("\n---\n\n");
         appendTocBlog(sb, new File(readmeFile, "../blog"));
-        sb.append("\n---\n");
+        sb.append("\n---\n\n");
         appendSection(sb, new File(readmeFile, "../src/main/resources/readme/tail.md"));
         FileUtils.writeStringToFile(readmeFile, sb.toString(), UTF_8);
         logger.info("Toc Build Success.");
@@ -42,7 +42,7 @@ public class ReadmeBuilder {
 
     private void appendTocBlog(StringBuilder readmeContent, File tocGroupFile) throws IOException {
         Triple<Integer, Integer, String> triple = getTocContent(tocGroupFile);
-        String title = String.format("%s(%s篇/%s字)\n", "## 博客目录", triple.getLeft(), DECIMAL_FORMAT.format(triple.getMiddle()));
+        String title = String.format("%s(%s篇/%s字)\n\n", "## 博客目录", triple.getLeft(), DECIMAL_FORMAT.format(triple.getMiddle()));
         readmeContent.append(title).append(triple.getRight());
     }
 
@@ -54,7 +54,7 @@ public class ReadmeBuilder {
                 .setArticleDisplayFormatter(displayFormatter) // set ArticleDisplayFormatter
                 .setDirDisplayFormatter(displayFormatter) // set DirDisplayFormatter
                 .setFileFilter(articleFilter) // set FileFilter
-                .setIndentation("    ") //set Indentation
+                .setIndentation("  ") //set Indentation
                 .visit(file) // visit
                 .getToc();
 

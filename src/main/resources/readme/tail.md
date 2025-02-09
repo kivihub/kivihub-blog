@@ -1,5 +1,7 @@
 ## 仓库配置
+
 ### Hexo配置
+
 首次克隆本仓库后执行如下命令
 
 ```bash
@@ -16,6 +18,7 @@ npm install
 ```
 
 ### GIT钩子配置
+
 配置pre-commit的Git钩子后，Git Commit时会自动更新README.md内容。
 
 1）首次克隆本仓库后执行如下命令
@@ -32,4 +35,5 @@ cp target/pre-commit.jar hooks/
 ```
 
 ---
+
 *非学无以广才，非志无以成学。 —— 诫子书*
