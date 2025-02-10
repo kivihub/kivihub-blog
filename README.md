@@ -13,14 +13,14 @@
 
 ---
 
-## 博客目录(249篇/236,375字)
+## 博客目录(249篇/236,373字)
 
 - [1.TroubleShooting (43篇)](blog/1.TroubleShooting)
   - [0.TroubleShooting方法论 (1,237字)](blog/1.TroubleShooting/0.TroubleShooting方法论.md)
   - [1.观察日志 (16篇)](blog/1.TroubleShooting/1.观察日志)
     - [1.为什么我的EL在测试和线上环境结果不同 (395字)](blog/1.TroubleShooting/1.观察日志/1.为什么我的EL在测试和线上环境结果不同.md)
     - [2.fastjson升级不兼容的问题 (333字)](blog/1.TroubleShooting/1.观察日志/2.fastjson升级不兼容的问题.md)
-    - [3.这不是我想要的日志 (355字)](blog/1.TroubleShooting/1.观察日志/3.这不是我想要的日志.md)
+    - [3.这不是我想要的日志 (354字)](blog/1.TroubleShooting/1.观察日志/3.这不是我想要的日志.md)
     - [4.模糊的异常信息让人蒙圈 (237字)](blog/1.TroubleShooting/1.观察日志/4.模糊的异常信息让人蒙圈.md)
     - [5.刚发现的虫子原来很早之前就有了 (410字)](blog/1.TroubleShooting/1.观察日志/5.刚发现的虫子原来很早之前就有了.md)
     - [6.发现冲突，解决冲突 (214字)](blog/1.TroubleShooting/1.观察日志/6.发现冲突，解决冲突.md)
@@ -28,7 +28,7 @@
     - [8.STFP报错Connection_reset (254字)](blog/1.TroubleShooting/1.观察日志/8.STFP报错Connection_reset.md)
     - [9.返回值里藏着异常信息 (324字)](blog/1.TroubleShooting/1.观察日志/9.返回值里藏着异常信息.md)
     - [10.看堆栈，勿急躁 (542字)](blog/1.TroubleShooting/1.观察日志/10.看堆栈，勿急躁.md)
-    - [11.归约问题定位思路 (266字)](blog/1.TroubleShooting/1.观察日志/11.归约问题定位思路.md)
+    - [11.归约问题定位思路 (267字)](blog/1.TroubleShooting/1.观察日志/11.归约问题定位思路.md)
     - [12.CA认证的证书为什么还需要手动导入？ (873字)](blog/1.TroubleShooting/1.观察日志/12.CA认证的证书为什么还需要手动导入？.md)
     - [13.Http上传文件的Content-Type格式 (345字)](blog/1.TroubleShooting/1.观察日志/13.Http上传文件的Content-Type格式.md)
     - [14.nginx反向代理自调用时小心Header里的host (733字)](blog/1.TroubleShooting/1.观察日志/14.nginx反向代理自调用时小心Header里的host.md)
@@ -186,7 +186,7 @@
   - [1.VCS简介 (2,193字)](blog/5.Git/1.VCS简介.md)
   - [2.Git配置 (1,430字)](blog/5.Git/2.Git配置.md)
   - [3.Git内部原理 (4,317字)](blog/5.Git/3.Git内部原理.md)
-  - [4.Git标签和分支 (3,344字)](blog/5.Git/4.Git标签和分支.md)
+  - [4.Git标签和分支 (3,342字)](blog/5.Git/4.Git标签和分支.md)
   - [5.Git基础操作之正常提交 (1,607字)](blog/5.Git/5.Git基础操作之正常提交.md)
   - [6.Git基础操作之撤销操作 (2,340字)](blog/5.Git/6.Git基础操作之撤销操作.md)
   - [7.git工作流 (621字)](blog/5.Git/7.git工作流.md)

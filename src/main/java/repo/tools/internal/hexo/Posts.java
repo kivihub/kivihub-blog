@@ -1,7 +1,7 @@
 package repo.tools.internal.hexo;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.filefilter.IOFileFilter;
+import org.apache.commons.io.filefilter.SuffixFileFilter;
 import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +9,9 @@ import repo.tools.internal.utils.Cmd;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static repo.tools.Hexo.REPO_DIR;
 
@@ -31,7 +33,7 @@ public class Posts {
     public Posts(int moreAfterLine) {
         this.moreAfterLine = moreAfterLine;
 
-        this.deployRoot = new File(REPO_DIR.getParentFile(), "hexo");
+        this.deployRoot = new File(REPO_DIR.getParentFile(), REPO_DIR.getName() + "-deploy");
         this.publicDir = new File(deployRoot, "public");
         this.sourceDir = new File(deployRoot, "source");
         this.postDir = new File(sourceDir, "_posts");
@@ -42,7 +44,7 @@ public class Posts {
         if (deployRoot.exists()) {
             FileUtils.forceDelete(deployRoot);
         }
-        FileUtils.copyDirectoryToDirectory(new File(REPO_DIR, "hexo"), REPO_DIR.getParentFile());
+        FileUtils.copyDirectory(new File(REPO_DIR, "hexo"), deployRoot);
         logger.info("Initialize posts complete.\n");
     }
 
@@ -81,7 +83,7 @@ public class Posts {
                     .Save();
             new PostTitle(this, srcfile, tarFile).FillTitleName() // set title name
                     .FillCreateDate(srcfile.getAbsolutePath()) // set create date
-                    .FillCategory(srcfile.getParentFile().getAbsolutePath()) // set category
+                    .FillCategory(srcfile.getParent()) // set category
                     .FillCoverImage() // set cover image
                     .Save();
         } catch (IOException e) {
@@ -105,17 +107,7 @@ public class Posts {
         FileUtils.copyFileToDirectory(archiveIndex, publicDir);
 
         // Step2: reset html title
-        FileUtils.listFiles(publicDir, new IOFileFilter() {
-            @Override
-            public boolean accept(File file) {
-                return file.getName().endsWith(".html");
-            }
-
-            @Override
-            public boolean accept(File file, String s) {
-                return false;
-            }
-        }, TrueFileFilter.INSTANCE).forEach(file -> {
+        FileUtils.listFiles(publicDir, new SuffixFileFilter(".html"), TrueFileFilter.INSTANCE).forEach(file -> {
             try {
                 String content = FileUtils.readFileToString(file);
                 content = content.replaceFirst("<title>.*</title>", "<title>Kivi's Blog</title>");
@@ -124,6 +116,22 @@ public class Posts {
                 throw new RuntimeException(e);
             }
         });
+
+        // Step3: reset relative reference
+        Map<String, String> mdPath = new HashMap<>();
+        Util.listArticles(publicDir, file -> {
+            String path = file.getParent().substring(publicDir.getAbsolutePath().length());
+            String name = file.getParentFile().getName();
+            mdPath.put(name, path);
+        });
+        Util.listArticles(publicDir, file -> {
+            try {
+                Util.replaceRelativeReference(file, mdPath);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
         logger.info("Post processing complete.\n");
     }
 
