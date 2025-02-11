@@ -55,7 +55,7 @@ widgets:
 plugins:
   animejs: true
   back_to_top: true
-  busuanzi: false
+  busuanzi: true
   gallery: true
   katex: false
   mathjax: false
@@ -64,6 +64,8 @@ plugins:
   progressbar: true
   baidu_analytics:
     tracking_id: 18875f49bd2f905d572a26a7796c193b
+  google_analytics:
+    tracking_id: G-H16FQ6QJL5
 # https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97-%E7%94%A8%E6%88%B7%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/#Giscus
 comment:
   type: giscus
