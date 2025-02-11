@@ -29,6 +29,8 @@ public class Posts {
     protected File sourceDir;
     // {deployRoot}/source/_posts
     private final File postDir;
+    // {deployRoot}/source/blogTree
+    private final File blogTreeDir;
 
     public Posts(int moreAfterLine) {
         this.moreAfterLine = moreAfterLine;
@@ -37,6 +39,7 @@ public class Posts {
         this.publicDir = new File(deployRoot, "public");
         this.sourceDir = new File(deployRoot, "source");
         this.postDir = new File(sourceDir, "_posts");
+        this.blogTreeDir = new File(sourceDir, "catalog");
     }
 
     public void Init() throws IOException {
@@ -81,7 +84,7 @@ public class Posts {
             new PostContent(tarFile).resetImage() // reset image format
                     .insertMoreTag(moreAfterLine) // insert <more>
                     .Save();
-            new PostTitle(this, srcfile, tarFile).FillTitleName() // set title name
+            new PostTitle(this, tarFile).FillTitleName() // set title name
                     .FillCreateDate(srcfile.getAbsolutePath()) // set create date
                     .FillCategory(srcfile.getParent()) // set category
                     .FillCoverImage() // set cover image
@@ -90,6 +93,12 @@ public class Posts {
             throw new RuntimeException(e);
         }
         logger.debug("Add post complete.\n");
+    }
+
+    public void AddBlogTree() throws IOException {
+        logger.info("Adding blogTree");
+        new BlogTree().getBlogTree().buildTitle().Save(blogTreeDir);
+        logger.info("Add blogTree complete.\n");
     }
 
     public void Generate() {
@@ -131,6 +140,8 @@ public class Posts {
                 throw new RuntimeException(e);
             }
         });
+        Util.replaceRelativeReference(new File(publicDir, "catalog/index.html"), mdPath);
+        Util.replaceCategoryReference(new File(publicDir, "catalog/index.html"));
 
         logger.info("Post processing complete.\n");
     }

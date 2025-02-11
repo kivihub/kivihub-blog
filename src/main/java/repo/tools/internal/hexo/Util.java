@@ -9,6 +9,12 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.IOException;
 import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +52,7 @@ public class Util {
         Matcher matcher = pattern.matcher(content);
         boolean replace = false;
         while (matcher.find()) {
-            String match = matcher.group(1);
+            String match = matcher.group(1).replace("+", "%2B");
             String mdRelPath = URLDecoder.decode(match, "UTF-8");
             String mdName = mdRelPath.substring(mdRelPath.lastIndexOf("/") + 1);
             String target = mdPath.get(removeIndexPrefix(removeSuffix(mdName)));
@@ -55,13 +61,33 @@ public class Util {
                 continue;
             }
 
-            content = StringUtils.replaceOnce(content, match, target);
+            content = StringUtils.replaceOnce(content, matcher.group(1), target);
             replace = true;
         }
         if (replace) {
             log.debug("Replace markdown relative reference {}", file.getPath());
             FileUtils.writeStringToFile(file, content);
         }
+    }
+
+    public static void replaceCategoryReference(File file) throws IOException {
+        String content = FileUtils.readFileToString(file);
+
+        String categoryRef = "<a href=\"(blog/([^\"]+))\"";
+        Pattern pattern = Pattern.compile(categoryRef);
+        Matcher matcher = pattern.matcher(content);
+        while (matcher.find()) {
+            String match = matcher.group(2);
+            String catePath = URLDecoder.decode(match, "UTF-8");
+            String[] paths = catePath.split("/");
+            for (int i = 0; i < paths.length; i++) {
+                paths[i] = removeIndexPrefix(paths[i]);
+            }
+
+            content = StringUtils.replaceOnce(content, matcher.group(1), "/categories/" + StringUtils.join(paths, "/"));
+        }
+
+        FileUtils.writeStringToFile(file, content);
     }
 
     public static String replaceImageTags(String content) {
@@ -105,5 +131,10 @@ public class Util {
         return filename.substring(0, filename.lastIndexOf("."));
     }
 
+    public static String now() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss Z");
+        OffsetDateTime now = OffsetDateTime.now(ZoneOffset.ofHours(8));
 
+        return now.format(formatter);
+    }
 }

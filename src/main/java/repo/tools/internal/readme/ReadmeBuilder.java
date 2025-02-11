@@ -17,8 +17,11 @@ import static java.nio.charset.StandardCharsets.UTF_8;
  * @date 2021/01/23 10:33 AM
  */
 public class ReadmeBuilder {
-    private final Logger logger = LoggerFactory.getLogger(ReadmeBuilder.class);
+    public static final String TREE_START_TAG = "\n<!-- blog tree start -->\n";
+    public static final String TREE_END_TAG = "\n<!-- blog tree end -->\n";
     public final static DecimalFormat DECIMAL_FORMAT = new DecimalFormat("###,##0");
+
+    private final Logger logger = LoggerFactory.getLogger(ReadmeBuilder.class);
     private final File readmeFile;
 
     public ReadmeBuilder(File readmeFile) throws IOException {
@@ -43,7 +46,7 @@ public class ReadmeBuilder {
     private void appendTocBlog(StringBuilder readmeContent, File tocGroupFile) throws IOException {
         Triple<Integer, Integer, String> triple = getTocContent(tocGroupFile);
         String title = String.format("%s(%s篇/%s字)\n\n", "## 博客目录", triple.getLeft(), DECIMAL_FORMAT.format(triple.getMiddle()));
-        readmeContent.append(title).append(triple.getRight());
+        readmeContent.append(title).append(TREE_START_TAG).append(triple.getRight()).append(TREE_END_TAG);
     }
 
     private Triple<Integer, Integer, String> getTocContent(File file) throws IOException {

@@ -13,6 +13,7 @@ public class Hexo {
         Posts post = new Posts(MORE_AFTER_LINE);
         post.Init();
         post.AddPosts();
+        post.AddBlogTree();
         post.Generate();
         post.PostProcess();
         post.Server();

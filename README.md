@@ -15,6 +15,8 @@
 
 ## 博客目录(249篇/236,373字)
 
+
+<!-- blog tree start -->
 - [1.TroubleShooting (43篇)](blog/1.TroubleShooting)
   - [0.TroubleShooting方法论 (1,237字)](blog/1.TroubleShooting/0.TroubleShooting方法论.md)
   - [1.观察日志 (16篇)](blog/1.TroubleShooting/1.观察日志)
@@ -298,6 +300,8 @@
   - [5.架构治理 (6,864字)](blog/16.工作/5.架构治理.md)
   - [6.一般的分析问题 (2,842字)](blog/16.工作/6.一般的分析问题.md)
   - [7.小数决策和审查数据 (4,862字)](blog/16.工作/7.小数决策和审查数据.md)
+
+<!-- blog tree end -->
 
 ---
 

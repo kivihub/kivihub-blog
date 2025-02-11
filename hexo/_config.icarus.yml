@@ -9,6 +9,7 @@ navbar:
   menu:
     首页: /
     分类: /categories
+    目录: /catalog
     留言板: /about
   links:
     GitHub:

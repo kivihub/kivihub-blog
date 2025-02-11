@@ -15,13 +15,13 @@ import static repo.tools.Hexo.REPO_DIR;
 import static repo.tools.internal.hexo.Util.*;
 
 public class PostTitle {
-    private static final String TITLE_TPL = "src/main/resources/hexo/title.yml";
+    private static final String TITLE_TPL = "src/main/resources/hexo/title_post.yml";
 
     private final Posts posts;
     private final File tarFile;
     private String title;
 
-    public PostTitle(Posts posts, File srcFile, File tarFile) throws IOException {
+    public PostTitle(Posts posts, File tarFile) throws IOException {
         this.posts = posts;
         this.tarFile = tarFile;
         this.title = FileUtils.readFileToString(new File(REPO_DIR, TITLE_TPL));
