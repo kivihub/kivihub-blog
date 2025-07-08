@@ -41,13 +41,15 @@ public class PostContent {
         if (lines.size() >= moreAfterLine) {
             StringBuilder sb = new StringBuilder();
             boolean inCodeBlock = false;
+            boolean inTable = false;
             boolean append = false;
             for (int i = 0; i < lines.size(); i++) {
                 sb.append(lines.get(i)).append("\n");
                 if (lines.get(i).startsWith("```")) {
                     inCodeBlock = !inCodeBlock;
                 }
-                if (!inCodeBlock && i + 1 >= moreAfterLine && !append) {
+                inTable = lines.get(i).startsWith("| ");
+                if (!inTable && !inCodeBlock && i + 1 >= moreAfterLine && !append) {
                     sb.append("<!-- more -->\n");
                     append = true;
                 }
