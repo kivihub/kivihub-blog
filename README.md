@@ -13,7 +13,7 @@
 
 ---
 
-## 博客目录(253篇/270,030字)
+## 博客目录(254篇/270,336字)
 
 
 <!-- blog tree start -->
@@ -251,7 +251,7 @@
   - [5.日常使用-杂 (69字)](blog/10.工具/5.日常使用-杂.md)
   - [6.sshuttle使用 (217字)](blog/10.工具/6.sshuttle使用.md)
   - [7.openfortivpn使用 (349字)](blog/10.工具/7.openfortivpn使用.md)
-- [11.网络 (8篇)](blog/11.网络)
+- [11.网络 (9篇)](blog/11.网络)
   - [1.网络上行和下行 (136字)](blog/11.网络/1.网络上行和下行.md)
   - [2.负载均衡4层和7层区别 (307字)](blog/11.网络/2.负载均衡4层和7层区别.md)
   - [3.session_cookie_token (192字)](blog/11.网络/3.session_cookie_token.md)
@@ -260,6 +260,7 @@
   - [6.URI格式 (309字)](blog/11.网络/6.URI格式.md)
   - [7.Http_trailing_slashes (131字)](blog/11.网络/7.Http_trailing_slashes.md)
   - [8.Http_Content-Length (144字)](blog/11.网络/8.Http_Content-Length.md)
+  - [9.请求代理配置 (306字)](blog/11.网络/9.请求代理配置.md)
 - [12.工程实践 (15篇)](blog/12.工程实践)
   - [1.多应用混合部署 (258字)](blog/12.工程实践/1.多应用混合部署.md)
   - [2.尽早抽象和持续重构 (517字)](blog/12.工程实践/2.尽早抽象和持续重构.md)
