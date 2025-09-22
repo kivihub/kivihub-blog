@@ -47,6 +47,9 @@ public class Posts {
         if (deployRoot.exists()) {
             FileUtils.forceDelete(deployRoot);
         }
+        // TODO 增量PUSH
+        // deployRoot.mkdirs();
+        // Cmd.Run(String.format("cd %s; git clone git@github.com:kivihub/kivihub.github.io.git .", deployRoot.getAbsolutePath()), false);
         FileUtils.copyDirectory(new File(REPO_DIR, "hexo"), deployRoot);
         logger.info("Initialize posts complete.\n");
     }
