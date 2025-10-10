@@ -44,6 +44,7 @@ public class PostTitle {
             throw new RuntimeException(e);
         }
 
+        // 默认为最近变更时间
         if (create.isEmpty()) {
             create = Cmd.RunSilent(String.format("cd %s; git log --format='%%ai' --follow -- '%s' | tail -1;", REPO_DIR.getAbsolutePath(), srcFilePath));
         }
