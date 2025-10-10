@@ -33,23 +33,32 @@ public class PostTitle {
     }
 
     public PostTitle FillCreateDate(String srcFilePath) {
-        String create = "";
+        String firstLine;
         try (BufferedReader reader = Files.newBufferedReader(tarFile.toPath())) {
-            Pattern pattern = Pattern.compile("<!--\\s*date:\\s*([\\d\\. :]+)\\s*-->");
-            Matcher matcher = pattern.matcher(reader.readLine());
-            if (matcher.find()) {
-                create = matcher.group(1);
-            }
+            firstLine = reader.readLine();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
-        // 默认为最近变更时间
-        if (create.isEmpty()) {
-            create = Cmd.RunSilent(String.format("cd %s; git log --format='%%ai' --follow -- '%s' | tail -1;", REPO_DIR.getAbsolutePath(), srcFilePath));
+        String displayTime = "";
+
+        // 指定日期
+        Matcher matcher = Pattern.compile("<!--\\s*date:\\s*([\\d. :]+)\\s*-->").matcher(firstLine);
+        if (matcher.find()) {
+            displayTime = matcher.group(1);
         }
 
-        title = title.replace("{date}", StringUtils.trim(create));
+        // 指定最近变更时间
+        if (Pattern.compile("<!--\\s*date:\\s*modify\\s*-->").matcher(firstLine).find()) {
+            displayTime = Cmd.RunSilent(String.format("cd %s; git log --format='%%ai' --follow -- '%s' | head -1;", REPO_DIR.getAbsolutePath(), srcFilePath));
+        }
+
+        // 默认为创建时间
+        if (displayTime.isEmpty()) {
+            displayTime = Cmd.RunSilent(String.format("cd %s; git log --format='%%ai' --follow -- '%s' | tail -1;", REPO_DIR.getAbsolutePath(), srcFilePath));
+        }
+
+        title = title.replace("{date}", StringUtils.trim(displayTime));
         return this;
     }
 
