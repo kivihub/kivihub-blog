@@ -37,8 +37,10 @@ class ArticleDisplayFormatter implements Function<File, String> {
         if (file.isFile()) {
             articleNum++;
             int articleWord = getMsWordsCount(file);
-            totalWordsNum += articleWord;
             displayName += " (" + DECIMAL_FORMAT.format(articleWord) + "字)";
+            if (!file.getAbsolutePath().contains("读书笔记")) {
+                totalWordsNum += articleWord;
+            }
         } else {
             int fileCount = FileUtils.listFiles(file, articleFilter, TrueFileFilter.INSTANCE).size();
             displayName += " (" + fileCount + "篇)";
