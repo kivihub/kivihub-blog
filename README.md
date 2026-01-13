@@ -13,7 +13,7 @@
 
 ---
 
-## 博客目录(260篇/242,467字)
+## 博客目录(260篇/242,530字)
 
 
 <!-- blog tree start -->
@@ -244,10 +244,10 @@
   - [1.排序 (1,006字)](blog/9.算法/1.排序.md)
   - [2.算法题型总结 (8,603字)](blog/9.算法/2.算法题型总结.md)
 - [10.工具 (7篇)](blog/10.工具)
-  - [1.日常使用-Ubuntu (2,479字)](blog/10.工具/1.日常使用-Ubuntu.md)
+  - [1.日常使用-Ubuntu (2,493字)](blog/10.工具/1.日常使用-Ubuntu.md)
   - [2.日常使用-Mac (652字)](blog/10.工具/2.日常使用-Mac.md)
-  - [3.日常使用-IDEA&Goland (823字)](blog/10.工具/3.日常使用-IDEA&Goland.md)
-  - [4.日常使用-Chrome (435字)](blog/10.工具/4.日常使用-Chrome.md)
+  - [3.日常使用-IDEA&Goland (869字)](blog/10.工具/3.日常使用-IDEA&Goland.md)
+  - [4.日常使用-Chrome (438字)](blog/10.工具/4.日常使用-Chrome.md)
   - [5.日常使用-杂 (69字)](blog/10.工具/5.日常使用-杂.md)
   - [6.sshuttle使用 (217字)](blog/10.工具/6.sshuttle使用.md)
   - [7.openfortivpn使用 (349字)](blog/10.工具/7.openfortivpn使用.md)
