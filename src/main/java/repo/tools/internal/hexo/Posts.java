@@ -92,7 +92,9 @@ public class Posts {
 
             /// Step2: modify file name
             String newFileName = Util.removeIndexPrefix(srcfile.getName());
-            tarFile.renameTo(new File(postDir, newFileName));
+            if (!tarFile.renameTo(new File(postDir, newFileName))) {
+                throw new IOException("Failed to rename " + srcfile + " to " + tarFile);
+            }
             tarFile = new File(postDir, newFileName);
 
             /// Step3: modify file content
