@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import repo.tools.internal.utils.Cmd;
 
 import java.io.File;
+import java.io.FileFilter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -32,6 +33,10 @@ public class Posts {
     // {deployRoot}/source/blogTree
     private final File blogTreeDir;
 
+    // hexo的git仓库目录
+    private final File gitPushDir;
+
+
     public Posts(int moreAfterLine) {
         this.moreAfterLine = moreAfterLine;
 
@@ -40,17 +45,24 @@ public class Posts {
         this.sourceDir = new File(deployRoot, "source");
         this.postDir = new File(sourceDir, "_posts");
         this.blogTreeDir = new File(sourceDir, "catalog");
+
+        this.gitPushDir = new File(REPO_DIR.getParentFile(), REPO_DIR.getName() + "-git-push");
     }
 
     public void Init() throws IOException {
         logger.info("Initializing posts...");
+        logger.info("  Init deploy directory...");
         if (deployRoot.exists()) {
             FileUtils.forceDelete(deployRoot);
         }
-        // TODO 增量PUSH
-        // deployRoot.mkdirs();
-        // Cmd.Run(String.format("cd %s; git clone git@github.com:kivihub/kivihub.github.io.git .", deployRoot.getAbsolutePath()), false);
         FileUtils.copyDirectory(new File(REPO_DIR, "hexo"), deployRoot);
+        logger.info("  Init deploy directory complete.");
+
+        if (!gitPushDir.exists()) {
+            logger.info("  Creating git push directory...");
+            Cmd.Run(String.format("cd %s; git clone git@github.com:kivihub/kivihub.github.io.git %s", gitPushDir.getParentFile().getAbsolutePath(), gitPushDir.getName()), false);
+            logger.info("  Initialize git push directory complete.");
+        }
         logger.info("Initialize posts complete.\n");
     }
 
@@ -160,9 +172,16 @@ public class Posts {
 
     public void Deploy() {
         logger.info("Deploying...");
-        Cmd.Run(String.format("cd %s; hexo deploy;", deployRoot.getAbsolutePath()), false);
+        logger.info("  Copying deploy directory to git push directory...");
+        try {
+            FileUtils.copyDirectory(new File(deployRoot, "public"), gitPushDir);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        logger.info("  Pushing to git repository...");
+        Cmd.Run(String.format("cd %s; git add .; git commit -m \"update\"; git push;", gitPushDir.getAbsolutePath()), false);
         logger.info("Deployment complete.\n");
     }
-
 
 }
