@@ -42,7 +42,7 @@ widgets:
     type: profile
     author: Kivi
     location: Beijing
-    avatar: /about/avatar.jpg
+    avatar: /about/avatar.jpeg
     avatar_rounded: false
     follow_link: https://github.com/kivihub
   - position: left
