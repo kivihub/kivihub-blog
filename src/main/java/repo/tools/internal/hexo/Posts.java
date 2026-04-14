@@ -174,6 +174,10 @@ public class Posts {
 
     public void Deploy() {
         logger.info("Deploying...");
+
+        logger.info("  Pulling latest changes from git repository...");
+        Cmd.Run(String.format("cd %s; git pull;", gitPushDir.getAbsolutePath()), false);
+
         logger.info("  Copying deploy directory to git push directory...");
         try {
             FileUtils.copyDirectory(new File(deployRoot, "public"), gitPushDir);
