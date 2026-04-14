@@ -176,7 +176,7 @@ public class Posts {
         logger.info("Deploying...");
 
         logger.info("  Pulling latest changes from git repository...");
-        Cmd.Run(String.format("cd %s; git pull;", gitPushDir.getAbsolutePath()), false);
+        Cmd.Run(String.format("cd %s; git pull;", gitPushDir.getAbsolutePath()), true);
 
         logger.info("  Copying deploy directory to git push directory...");
         try {
@@ -186,7 +186,7 @@ public class Posts {
         }
 
         logger.info("  Pushing to git repository...");
-        Cmd.Run(String.format("cd %s; git add .; git commit -m \"update\"; git push;", gitPushDir.getAbsolutePath()), false);
+        Cmd.Run(String.format("cd %s; git add .; git commit -m \"update\"; git push;", gitPushDir.getAbsolutePath()), true);
         logger.info("Deployment complete.\n");
     }
 
